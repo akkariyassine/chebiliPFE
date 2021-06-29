@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "57573249-cc2e-447a-9391-7cdbe5eceea7"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css" 
             ],
             "scripts": []
           },
@@ -91,9 +96,41 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "assets/js/jquery.min.js",
+		
+
+  "assets/js/popper.min.js",
+  "assets/js/bootstrap.min.js",
+  
+      "assets/plugins/theia-sticky-sidebar/ResizeSensor.js",
+      "assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js",
+  
+  "assets/js/script.js",
+
+  		"assets/js/jquery.min.js",
+		
+		"assets/js/popper.min.js",
+		"assets/js/bootstrap.min.js",
+		
+
+        "assets/plugins/theia-sticky-sidebar/ResizeSensor.js",
+        "assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js",
+		
+		"assets/plugins/select2/js/select2.min.js",
+		
+		"assets/js/moment.min.js",
+		"assets/js/bootstrap-datetimepicker.min.js",
+		
+		"assets/plugins/fancybox/jquery.fancybox.min.js",
+		
+		"assets/js/script.js"
+
+
+            ]
           }
         },
         "lint": {

@@ -1,0 +1,243 @@
+<!DOCTYPE html> 
+<html lang="en">
+	
+<!-- doccure/register.html  30 Nov 2019 04:12:20 GMT -->
+<head>
+		<meta charset="utf-8">
+		<title>Doccure</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	
+	
+	</head>
+    
+	<body class="account-page">
+      
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+		
+			<!-- Header -->
+			<app-header></app-header>
+			<!-- /Header -->
+			
+			<!-- Page Content -->
+			<div class="content">
+				<div class="container-fluid">
+					
+					<div class="row">
+						<div class="col-md-8 offset-md-2">
+								
+							<!-- Register Content -->
+							<div class="account-content" >
+								<div class="row align-items-center justify-content-center" style="width: 1000px;">
+									<div class="col-md-7 col-lg-6 login-left">
+										<img src="assets/img/login-banner.png" class="img-fluid" alt="Doccure Register">	
+									</div>
+									<div class="col-md-12 col-lg-6 login-right" >
+										<div class="login-header">
+											<h3>Patient Register <a routerLink="/doctor-register">Are you a Doctor?</a></h3>
+										</div>
+										
+										<!-- Register Form -->
+										<form [formGroup]="form" (ngSubmit)="onSubmit()" >
+                                         <div class="row g-5">
+											<div class="form-group form-focus " style="width: 225px; margin-left: 10px;">
+												<input type="text" class="form-control floating" formControlName="firstname" type="text"   [ngClass]="{'is-invalid': submitted && f.firstname.errors}">
+												<label for="firstname"class="focus-label">Firstname</label>
+                                                <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.firstname.errors.required">
+                                                      Firstname is required
+                                                    </div>
+                                                  </div>
+											</div>
+
+                                            <div class="form-group form-focus " style="width: 225px; margin-left: 10px;">
+												<input type="text" class="form-control floating" formControlName="lastname" type="text"   [ngClass]="{'is-invalid': submitted && f.lastname.errors}">
+												<label for="lastname"class="focus-label">lastname</label>
+                                                <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.lastname.errors.required">
+                                                      Lastname is required
+                                                    </div>
+                                                  </div>
+											</div>
+                                            <div class="form-group form-focus " style="margin-left: 10px;width: 107px;" >
+                                                <label for="age" class="focus-label">age</label>
+                                                <select  formControlName="age" type="text" class="form-control floating" [(ngModel)]="patient.age" [ngClass]="{'is-invalid': submitted && f.age.errors}" >
+                                                  <option   value="16"> 16</option><option   value="17"> 17</option><option   value="18"> 18</option><option   value="19">19 </option><option   value="20">20 </option><option   value="21">21 </option>
+                                                  <option   value="22">22 </option><option   value="23">23 </option><option   value="24">24 </option><option   value="19">25 </option><option   value="26">26 </option><option   value="27">27 </option>
+                                                  <option   value="28">28 </option><option   value="29">29 </option><option   value="30">30 </option><option   value="31">31 </option><option   value="32">32 </option><option   value="33">33 </option>
+                                                  <option   value="34">34 </option><option   value="35">35 </option><option   value="36">36 </option><option   value="37">37 </option><option   value="38">38 </option><option   value="39">39 </option>
+                                                  <option   value="40">40 </option><option   value="41">41 </option><option   value="42">42 </option><option   value="43">43 </option><option   value="44">44 </option><option   value="45">45 </option>
+                                                  <option   value="46">46 </option><option   value="47">47 </option><option   value="48">48 </option><option   value="49">49 </option><option   value="50">50 </option><option   value="51">51 </option>
+                                                  <option   value="52">52 </option><option   value="53">53 </option><option   value="54">54 </option><option   value="55">55 </option><option   value="56">56 </option><option   value="57">57 </option>
+                                                  <option   value="58">58 </option><option   value="59">59 </option><option   value="60">60 </option><option   value="61">61 </option><option   value="62">62 </option><option   value="63">63 </option>
+                                                  <option   value="64">64 </option><option   value="65">65 </option><option   value="66">66 </option><option   value="67">67 </option><option   value="68">68 </option><option   value="69">69 </option>
+                                                  <option   value="70">70 </option><option   value="71">71 </option><option   value="72">72 </option><option   value="73">73 </option><option   value="74">74 </option><option   value="75">75 </option>
+                                                  <option   value="76">76 </option><option   value="77">77 </option><option   value="78">78 </option><option   value="79">79 </option><option   value="80">80 </option><option   value="81">81 </option>
+                                                  <option   value="82">82 </option><option   value="83">83 </option><option   value="84">84 </option><option   value="85">85 </option><option   value="86">56 </option><option   value="87">87 </option>
+                                                  <option   value="88">88 </option><option   value="89">89 </option><option   value="90">90 </option><option   value="91">91 </option><option   value="92">92 </option><option   value="93">93 </option>
+                                                  <option   value="100">100 </option><option   value="101">101 </option><option   value="102">102 </option><option   value="103">103 </option><option   value="104">104 </option><option   value="105">105 </option>
+                                                  <option   value="106">106 </option><option   value="107">107 </option><option   value="108">108 </option><option   value="109">109 </option><option   value="110">110 </option><option   value="111">111 </option>
+                                                </select>
+                                                  <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.age.errors.required">
+                                                    Age is required
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="form-group form-focus" style="margin-left: 10px;width: 107px;">
+                                                <label for="genre" class="focus-label">genre</label>
+                                                <select  formControlName="genre" type="text" class="form-control floating" [(ngModel)]="patient.genre" [ngClass]="{'is-invalid': submitted && f.genre.errors}" >
+                                                  <option   value="femme">Femme</option><option   value="Homme">homme</option></select>
+                                                <div *ngIf="submitted && f.genre.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.genre.errors.required">
+                                                    Genre is required
+                                                  </div>
+                                                </div>
+                                              </div>
+
+
+                                              <div class="form-group form-focus " style="margin-left: 10px;width: 107px;">
+                                                <label for="pays" class="focus-label ">Country</label>
+                                                <select  formControlName="pays" type="text" class="form-control floating" [(ngModel)]="patient.pays" [ngClass]="{'is-invalid': submitted && f.pays.errors}" (change)="getGouvernorat($event)">
+                                                  <option  *ngFor="let obj of dataCountry" value="{{obj.name_pays}}"> {{obj.name_pays}}</option>
+                                                </select>
+                                                  <div *ngIf="submitted && f.pays.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.pays.errors.required">
+                                                    Country is required
+                                                  </div>
+                                                </div>
+                                              </div>
+
+
+                                              <div class="form-group form-focus" style="margin-left: 10px;width: 108px;">
+                                                <label for="gouvernorat" class="focus-label ">State</label>
+                                                <select  formControlName="gouvernorat" type="text" class="form-control floating" [(ngModel)]="patient.gouvernorat" [ngClass]="{'is-invalid': submitted && f.gouvernorat.errors}" >
+                                                  <option  *ngFor="let obj of dataState" value="{{obj.name_gouv}}"> {{obj.name_gouv}}</option>
+                                                </select>
+                                                  <div *ngIf="submitted && f.gouvernorat.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.gouvernorat.errors.required">
+                                                    State is required
+                                                  </div>
+                                                </div>
+                                              </div>
+
+
+                                              <div class="form-group form-focus" style="margin-left: 10px;width: 460px;">
+                                                <label for="address" class="focus-label">address</label>
+                                                <input formControlName="address"type="text" class="form-control floating"   [ngClass]="{'is-invalid': submitted && f.address.errors}">
+                                                <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.address.errors.required">
+                                                    address is required
+                                                  </div>
+                                                </div>
+                                              </div>
+
+
+											<div class="form-group form-focus form-floating" style="margin-left: 10px;width: 225px;">
+												<input type="text" class="form-control floating" formControlName="phone"  [ngClass]="{'is-invalid': submitted && f.phone.errors}">
+												<label for="phone"class="focus-label">phone mobile</label>
+                                                <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.phone.errors.required">
+                                                      phone is required
+                                                    </div>
+                                                  </div>
+											</div>
+
+                                            <div class="form-group form-focus"style="width: 225px; margin-left: 10px;">
+                                                <label for="email" class="focus-label">email</label>
+                                                <input formControlName="email" type="email" class="form-control floating"  [ngClass]="{'is-invalid': submitted && f.email.errors}">
+                                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.email.errors.required">
+                                                    Email is required
+                                                  </div>
+                                                  <div *ngIf="f.email.errors.email">
+                                                    Email must be a valid email
+                                                  </div>
+                                                </div>
+                                              </div>
+
+											<div class="form-group form-focus" style="width: 225px; margin-left: 10px;">
+												<input type="password" class="form-control floating" formControlName="password"[ngClass]="{'is-invalid': submitted && f.password.errors}">
+												<label class="focus-label">Create Password</label>
+                                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.password.errors.required">
+                                                      password is required
+                                                    </div>
+                                                    <div *ngIf="f.password.errors.minlength">
+                                                      Password must be at least 6 charactes
+                                                    </div>
+                                                  </div>
+											</div>
+
+                                        
+                                            <div class="form-group form-focus" style="width: 225px; margin-left: 10px;">
+                                              <label for="passwordconfirmation" class="focus-label">password confirmation</label>
+                                              <input formControlName="passwordconfirmation" type="Password" class="form-control floating"  [ngClass]="{'is-invalid': submitted && f.passwordconfirmation.errors}">
+                                              <div *ngIf="submitted && f.passwordconfirmation.errors" class="invalid-feedback">
+                                                <div *ngIf="f.passwordconfirmation.errors.required">
+                                                  password is required
+                                                </div>
+                                                <div *ngIf="f.passwordconfirmation.errors.minlength">
+                                                  Password must be at least 6 charactes
+                                                </div>
+                                              </div>
+                                            </div>
+
+
+
+											<div class="text-right" style="margin-left: 300px;">
+												<a class="forgot-link" routerLink="/login" style="font-weight: 700;">Already have an account?</a>
+											</div>
+											<button class="btn btn-primary btn-block btn-lg login-btn" type="submit" style="margin-left: 10px; color: white;width: 500px;margin-right: 10px;height: 50px;">Signup</button>
+											<div class="login-or" style="margin-left: 250px; margin-right: 250px;">
+												<span class="or-line"></span>
+												<span class="span-or">-Or-</span>
+											</div>
+                                           
+											<div class="row form-row social-login" style="margin-top: -20px;">
+												<div style="margin-left:20px; width: 230px;">
+													<button class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</button>
+												</div>
+												<div style="margin-left:20px; width: 200px;">
+													<button class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</button>
+												</div>
+											</div>
+                                        </div>
+										</form>
+										<!-- /Register Form -->
+										
+									</div>
+								</div>
+							</div>
+							<!-- /Register Content -->
+								
+						</div>
+					</div>
+
+				</div>
+
+			</div>		
+			<!-- /Page Content -->
+   
+			<!-- Footer -->
+			<app-footer></app-footer>
+			<!-- /Footer -->
+		   
+		</div>
+		<!-- /Main Wrapper -->
+	  
+		<!-- jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- Custom JS -->
+		<script src="assets/js/script.js"></script>
+		
+	</body>
+
+<!-- doccure/register.html  30 Nov 2019 04:12:20 GMT -->
+</html>
