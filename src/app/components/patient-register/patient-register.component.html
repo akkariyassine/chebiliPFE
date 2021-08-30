@@ -10,13 +10,81 @@
 	
 	</head>
     
-	<body class="account-page">
+	<body class="account-page" style="padding-top:120px;">
       
 		<!-- Main Wrapper -->
 		<div class="main-wrapper">
 		
 			<!-- Header -->
-			<app-header></app-header>
+      <header class="header"  >
+				<nav class="navbar navbar-expand-lg header-nav" ><!--style="height: 75px; "-->
+					<div class="navbar-header">
+						<a id="mobile_btn" href="javascript:void(0);">
+							<span class="bar-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+						<a routerLink="/home" class="navbar-brand logo">
+							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+						</a>
+					</div>
+					<div class="main-menu-wrapper " >
+						<div class="menu-header">
+							<a routerLink="/home" class="menu-logo">
+								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+							</a>
+							<a id="menu_close" class="menu-close" href="javascript:void(0);">
+								<i class="fas fa-times"></i>
+							</a>
+						</div>
+						<ul class="main-nav" style="margin-left: 20px;">
+							<li >
+								<a routerLink="/home">Home</a>
+							</li >
+							<li >
+								<a routerLink="/search-Doctor">Doctors <i ></i></a>
+							   
+							</li>	
+							<li >
+								<a routerLink="/search-Pharmacie">pharmacies <i ></i></a>
+							   
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/articles">Articles <i ></i></a>
+								
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/tarif">Tarif <i></i></a>
+								
+							</li>
+							<li>
+								<a routerLink="admin/index.html" >Conference</a>
+							</li>
+			
+							<li>
+								<a routerLink="/about" >About-US</a>
+							</li>
+							<li>
+								<a routerLink="/contact-us" >Contact-US</a>
+							</li>
+						   
+						</ul>		 
+					</div>		 
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item">
+							<button class=" info btn1" routerLink="/test">Testing Now</button>
+							<!-- <a class="  info appointment-btn btn1"  routerLink="/test">Testing Now</a>-->
+						</li>
+						<!--<li class="nav-item">
+							<a class="nav-link header-login" routerLink="/login">login / Signup </a>
+						</li>-->
+					</ul>
+				</nav>
+			</header>
 			<!-- /Header -->
 			
 			<!-- Page Content -->
@@ -51,8 +119,8 @@
 											</div>
 
                                             <div class="form-group form-focus " style="width: 225px; margin-left: 10px;">
-												<input type="text" class="form-control floating" formControlName="lastname" type="text"   [ngClass]="{'is-invalid': submitted && f.lastname.errors}">
-												<label for="lastname"class="focus-label">lastname</label>
+                                              <input type="text" class="form-control floating" formControlName="lastname" type="text"   [ngClass]="{'is-invalid': submitted && f.lastname.errors}">
+                                              <label for="lastname"class="focus-label">lastname</label>
                                                 <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
                                                     <div *ngIf="f.lastname.errors.required">
                                                       Lastname is required
@@ -106,7 +174,7 @@
                                                   <div *ngIf="f.pays.errors.required">
                                                     Country is required
                                                   </div>
-                                                </div>
+                                                  </div>
                                               </div>
 
 

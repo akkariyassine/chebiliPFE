@@ -36,8 +36,8 @@ export class PatientRegisterComponent implements OnInit {
     }
     getCountry(){
       this.dataService.getPays().subscribe(res=>{
-        this.dataCountry=res
-        console.log(this.dataCountry=res)   ;
+        this.dataCountry=JSON.parse(res)
+        console.log(JSON.parse(res) )  ;
       })
     }
    
@@ -88,7 +88,7 @@ export class PatientRegisterComponent implements OnInit {
        this.data=res
        console.log('jkl');
        console.warn(this.form.value);
-       this.router.navigate(['/tab']);
+       this.router.navigate(['/login']);
       if(this.data.status == 1){
         console.log('entrain de registrer')
         this.toastr.success(JSON.stringify(this.data.message) , JSON.stringify(this.data.code), {

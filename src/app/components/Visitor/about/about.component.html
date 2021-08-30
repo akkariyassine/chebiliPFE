@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="en">
+	
+<!-- doccure/index.html  30 Nov 2019 04:12:03 GMT -->
+<head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<title>Doccure</title>
+	
+</head>
+<body>
+
+    <!-- Main Wrapper -->
+		<div class="main-wrapper" >
+		
+			<!-- Header -->
+			<app-header></app-header>
+			<!-- /Header -->
+			<!---->
+<div *ngIf="info"  style="background-color: white; margin-top: 85px;">
+            <div class="row " style="background-color: white; width: 33%; float: left; margin-left: 50px;">
+        
+                <br>
+                <br>
+                <h1 style="color: #007bff; text-align: center;"><br> <br> {{info.titre1}} </h1>  
+                <h2 style="margin-left: 30px;"> {{info.soustitre1}}</h2>
+                <h3 style="margin-left: 50PX; font-size: 20PX; color: rgb(70, 187, 187);"> <BR>{{info.soustitre1_2}}</h3>
+            </div>
+            <div class="row" style="width: 60%;">
+                <img src="assets/img/ee.jpg"    style=" float:right; margin-left: 100px;">
+            </div>
+            <div style="background-color:  rgba(70, 187, 187, 0.384);">
+                <br>
+            </div>
+<div class="row" style="margin-left: 50px; margin-right: 50px; text-justify: inter-word;text-align: justify;">
+  <div><br>
+    <h1 style="color: #007bff;">{{info.titre2}}</h1> 
+    <p> {{info.soustitre2}}</p>
+     
+     
+ <p>{{info.paragraphe2}} {{info.paragraphe2_2}} {{info.paragraphe2_3}}</p>
+     <br>
+  </div>
+</div>
+
+
+<div class="row" style=" width: 100%; margin-left: 50px; height: 400px;">
+        <div style="width: 500px ; margin-left: 50px;">
+           <img src="assets/img/mn.jpg"    style="height: 300px; float: right;">
+        </div>
+
+        <div style="width: 600px; float:left;    margin-right: 50px; margin-left: 50px;" >
+            <h2 style="color: #007bff"> <br> {{info.titre3}}</h2>
+          <p style="text-align: justify;"> {{info.paragraphe3}} 
+            {{info.paragraphe3_2}}  <br>  {{info.paragraphe3_3}}</p>
+            <br>
+        </div>
+</div>
+
+
+<div class="row" style="background-color: rgba(128, 128, 128, 0.103);padding-left: 50px;">
+    <br>
+    <div style="width: 500px ; margin-left: 50px;">
+        <h2 style="color: #007bff"> <br>{{info.titre4}} </h2>
+        <p>
+            {{info.paragraphe4}} {{info.paragraphe4_2}}  {{info.paragraphe4_3}}</p>
+        
+     </div>
+
+     <div style="width: 600px; float:left;    margin-right: 50px; margin-left: 50px;" >
+         <img src="assets/img/tab3.jpg"    style="height: 300px; float: right;">
+         <br>
+     </div>
+    
+</div>
+
+
+<div class="row" style=" width: 100%; margin-left: 50px; height: 400px;">
+    <div style="width: 500px ; margin-left: 50px;"><br><br>
+       <img src="assets/img/tab4.jpg"    style="height: 300px; float: right;">
+    </div>
+
+    <div style="width: 600px; float:left;    margin-right: 50px; margin-left: 50px;" >
+        <h2 style="color: #007bff"> <br> {{info.titre5}} </h2>
+      <p style="text-align: justify;"> 
+        {{info.paragraphe5}} {{info.paragraphe5_2}}  {{info.paragraphe5_3}}</p>
+        <br>
+        <button type="button" class="btnn nav-link"  style="background-color: #09e5ab; color: white; border-color: white; border-radius: 4;"> Make appointment</button>
+    </div>
+</div>
+</div>
+        </div>
+</body>
+</html>

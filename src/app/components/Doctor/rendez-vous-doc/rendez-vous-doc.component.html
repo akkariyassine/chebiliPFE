@@ -101,7 +101,7 @@
 			<!-- /Header -->
 			
 			<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
+			<div class="breadcrumb-bar" style="margin-top: 85px; height: 90px; background-color: #007bff;">
 				<div class="container-fluid">
 					<div class="row align-items-center">
 						<div class="col-md-12 col-12">
@@ -126,7 +126,7 @@
 						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 						
 							<!-- Profile Sidebar -->
-							<div class="profile-sidebar" style="width: 300px;">
+							<div class="profile-sidebar" >
 								<div class="widget-profile pro-widget-content">
 									<div class="profile-info-widget">
 										<a href="#" class="booking-doc-img">
@@ -219,22 +219,22 @@
 							
 						</div>
 						
-						<div class="col-md-7 col-lg-8 col-xl-9">
-							<div class="appointments" style="margin-left: 110px; width: 980px;">
+						<div class="col-md-7 col-lg-8 ">
+							<div class="appointments" style="margin-left: 115px;" >
 							
 								<!-- Appointment List -->
-								<div class="appointment-list">
+								<div class="appointment-list" *ngFor="let rdv of rdvs" style="width: 970px;">
 									<div class="profile-info-widget">
 										<a href="patient-profile.html" class="booking-doc-img">
 											<img src="assets/img/patients/patient.jpg" alt="User Image">
 										</a>
 										<div class="profile-det-info">
-											<h3><a href="patient-profile.html">Richard Wilson</a></h3>
+											<h3><a href="patient-profile.html">{{rdv.firstname}} {{rdv.lastname}}</a></h3>
 											<div class="patient-details">
-												<h5><i class="far fa-clock"></i> 14 Nov 2019, 10.00 AM</h5>
-												<h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5>
-												<h5><i class="fas fa-envelope"></i> richard@example.com</h5>
-												<h5 class="mb-0"><i class="fas fa-phone"></i> +1 923 782 4575</h5>
+												<h5><i class="far fa-clock"></i> {{rdv.date}}, {{rdv.heure}} AM</h5>
+												<h5><i class="fas fa-map-marker-alt"></i> {{rdv.pays}}, {{rdv.gouvernorat}}</h5>
+												<h5><i class="fas fa-envelope"></i> {{rdv.email}}</h5>
+												<h5 class="mb-0"><i class="fas fa-phone"></i> {{rdv.phone}}</h5>
 											</div>
 										</div>
 									</div>
@@ -242,11 +242,11 @@
 										<button class=" btn-sm bg-info-light" data-toggle="modal" data-target="#appt_details" style="border-color: transparent; margin-left: 40px;">
 											<i class="far fa-eye"></i> View
                                         </button>
-										<button class=" btn-sm bg-success-light" style="border-color: transparent; margin-left: 10px;">
+										<button class=" btn-sm bg-success-light" (click)="confirmRDV(rdv.id)" style="border-color: transparent; margin-left: 10px;">
 											<i class="fas fa-check"></i> Accept
                                         </button>
 
-										<button class=" btn-sm bg-danger-light" style="border-color: transparent; margin-left: 10px;">
+										<button class=" btn-sm bg-danger-light" (click)="cancelRDV(rdv.id)" style="border-color: transparent; margin-left: 10px;">
 											<i class="fas fa-times"></i> Cancel
                                         </button>
 									</div>

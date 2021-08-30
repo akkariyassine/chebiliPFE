@@ -1,3 +1,41 @@
 #contact .card:hover i,#contact .card:hover h4{
-	color: #87d37c;
+	color: #09e5ab;
 }
+
+#imaa {
+
+	background-color: rgb(255, 255, 255);
+	padding-left: 120px;
+	width: 60%;
+	float:right;
+	margin-right: -8px;
+	
+	}
+#contenuu {
+
+background-color:#007bff; /*#15558d*/
+float:left;
+width: 31%;
+	height: 474px;
+		}
+#p2{
+	width: 100%;
+	;
+}
+
+.btnn {
+	border: 1px solid #09e5ab;
+	background-color: #09e5ab;
+	color: white;
+	padding: 14px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+  }
+  .btnn:hover{
+
+	background: #2196F3;
+	color: white;
+	border-color: transparent;
+  }
+  

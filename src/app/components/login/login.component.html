@@ -14,11 +14,79 @@
 		<div class="main-wrapper">
 		
 			<!-- Header -->
-			<app-header></app-header>
+			<header class="header"   >
+				<nav class="navbar navbar-expand-lg header-nav" ><!--style="height: 75px; "-->
+					<div class="navbar-header">
+						<a id="mobile_btn" href="javascript:void(0);">
+							<span class="bar-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+						<a routerLink="/home" class="navbar-brand logo">
+							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+						</a>
+					</div>
+					<div class="main-menu-wrapper " style="margin-left: 70px;" >
+						<div class="menu-header">
+							<a routerLink="/home" class="menu-logo">
+								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+							</a>
+							<a id="menu_close" class="menu-close" href="javascript:void(0);">
+								<i class="fas fa-times"></i>
+							</a>
+						</div>
+						<ul class="main-nav" style="margin-left: 20px;">
+							<li >
+								<a routerLink="/home">Home</a>
+							</li >
+							<li >
+								<a routerLink="/search-Doctor">Doctors <i ></i></a>
+							   
+							</li>	
+							<li >
+								<a routerLink="/search-Pharmacie">pharmacies <i ></i></a>
+							   
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/articles">Articles <i ></i></a>
+								
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/tarif">Tarif <i></i></a>
+								
+							</li>
+							<li>
+								<a routerLink="admin/index.html" >Conference</a>
+							</li>
+			
+							<li>
+								<a routerLink="/about" >About-US</a>
+							</li>
+							<li>
+								<a routerLink="/contact-us" >Contact-US</a>
+							</li>
+						   
+						</ul>		 
+					</div>		 
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item">
+							<a class="nav-link header-login" routerLink="/test">Testing Now</a>
+							<!-- <a class="  info appointment-btn btn1"  routerLink="/test">Testing Now</a>-->
+						</li>
+						<!--<li class="nav-item">
+							<a class="info btn1" routerLink="/login">login / Signup </a>
+						</li>-->
+					</ul>
+				</nav>
+			</header>
 			<!-- /Header -->
 			
 			<!-- Page Content -->
-			<div class="content">
+			<div class="content" style="margin-top: 85px;">
 				<div class="container-fluid">
 					
 					<div class="row" style="width: 1400px;">
@@ -36,7 +104,7 @@
 										</div>
 										<form [formGroup]="form" (ngSubmit)="onSubmit()">
 											<div class="form-group form-focus">
-												<input type="email" class="form-control floating" formControlName="email" class="form-control" name="email"  type="email" [ngClass]="{'is-invalid': submitted && f.email.errors}" >
+												<input type="email" class="form-control floating" formControlName="email" class="form-control" name="email"  [ngClass]="{'is-invalid': submitted && f.email.errors}" >
 												<label for="email" class="focus-label" >Email</label>
                                                 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                                                     <div *ngIf="f.email.errors.required">
@@ -45,7 +113,7 @@
                                                     <div *ngIf="f.email.errors.email">
                                                       Email must be a valid email
                                                     </div>
-                                                  </div>
+                                                </div>
 											</div>
 
 											<div class="form-group form-focus">
@@ -60,17 +128,17 @@
 											<div class="text-right">
 												<a class="forgot-link" href="forgot-password.html">Forgot Password ?</a>
 											</div>
-											<button class="btn btn-primary btn-block btn-lg login-btn" style="color:white" type="submit">Login</button>
+											<button class=" bou btn btn-primary btn-block btn-lg login-btn" style="color:rgb(240, 239, 239)" type="submit">Login</button>
 											<div class="login-or">
 												<span class="or-line"></span>
 												<span class="span-or">or</span>
 											</div>
 											<div class="row form-row social-login">
 												<div class="col-6">
-													<a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
+													<a href="#" class="hov1 btn btn-facebook btn-block" style="border-color: white;"><i class="fab fa-facebook-f mr-1"></i> Login</a>
 												</div>
 												<div class="col-6">
-													<a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
+													<a href="#" class="hov2 btn btn-google btn-block" style="border-color: white;"><i class="fab fa-google mr-1"></i> Login</a>
 												</div>
 											</div>
 											<div class="text-center dont-have">Don’t have an account? <a routerLink="/patient-register">Register</a></div>

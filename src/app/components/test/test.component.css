@@ -1,9 +1,64 @@
+.btn1{
+  border-color: #007bff;
+  color:white; /*#0de0fe;*/
+  background-color: #007bff;
+}
+.btn1:hover {
+  background-color:white ; /* Green */
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.info {
+border-color: #2196F3;
+color: dodgerblue;
+border-radius: 4px;
+  padding: 10px 15px !important;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.info:hover {
+background: #2196F3;
+color: white;
+}
+
+
+
+
 .imeg{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.fff{
+  background: rgb(254, 255, 255);
+background: linear-gradient(0deg, rgba(175,183,184,1) 0%, rgba(255,255,255,1) 100%);
+ /* background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,1) 100%);
+ /* background-image: linear-gradient(180deg, white, rgb(2,0,36));
+ /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);*/
+
+}
+.hh3{
+  font-weight: 30px;
+  color: #336699;
+  font-size: large;
+}
+.imm{
+  margin-left: 700px;
+  margin-top: -400px;
+  padding-top: 475px;
+}
+.imm2{
+  margin-left: 700px;
+  margin-top: -325px;
+  padding-top: 500px;
+
+}
 .cap{
  
   margin-left: 50px ;
@@ -15,13 +70,13 @@
 .tt:hover {
     color: #4daee6; 
   }
-    .btn1{
-        width: 250px;background: rgb(0, 9, 130); 
-        border-color: rgb(16, 5, 168); 
+    .btnn{
+        width: 250px;background:#dc09ae /*rgb(0, 9, 130)*/; 
+        border-color: #dc09ae/*rgb(16, 5, 168)*/; 
         color: white; 
         font-weight: 50px;
     }
-  .btn1:hover {
+  .btnn:hover {
     background-color: #ff00b3; /* Green */
     color: white;
     border-color: #ff00b3; 

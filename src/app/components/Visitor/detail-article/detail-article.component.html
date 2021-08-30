@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<app-header></app-header>
+<!-- Breadcrumb --> 
+<app-breadcrumb></app-breadcrumb>
+<!--<div class="breadcrumb-bar" style="background-color: #007bff; height: 100px;">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-8 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/home">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Search Article</li>
+                    </ol>
+                </nav>
+                <h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2>
+            </div>
+            <div class="col-md-4 col-12 d-md-block d-none" style="margin-left: 1000px; margin-top: -30px;">
+                <div class="sort-by">
+                    <span class="sort-title">Sort by</span>
+                    <span class="sortby-fliter">
+                        <select class="select"  style="width: 100px;">
+                            <option>Select</option>
+                            <option class="sorting">Rating</option>
+                            <option class="sorting">Popular</option>
+                            <option class="sorting">Latest</option>
+                            <option class="sorting">Free</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+    <!-- // Header  -->
+
+   <br>
+
+
+    <div class="margin-tb-30px"  >
+        <div class="container"*ngFor="let article of articles">
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div class="border-radius-10 background-white  margin-bottom-35px padding-30px">
+                        <h4><i class="fas fa-file-alt margin-right-10px text-main-color"></i> Blog Post: </h4>
+                        <hr>
+
+                        <div class="meta">
+                            <span class="margin-right-20px text-extra-small">By :  <a href="#">{{article.firstname}} {{article.lastname}}    </a></span>
+                            <span class="margin-right-20px text-extra-small" style="margin-left: 170px;">Date :  <a href="#">{{article.date}}    </a></span>
+                            <span class="margin-right-20px text-extra-small" style="float: right;">hour :  <a href="#">{{article.heure}}  </a></span>
+<br>
+                        </div>
+                        <hr>
+                    <h1> {{article.titre}}  </h1>   
+                        <div class="thumbnail margin-bottom-20px"><img src="assets/img/new/two.jpg" style="width: 700px; height: 400px;" alt="image"></div>
+                        <div class="entry-content">
+                            <p>Mauris fermentum porta sem, non hendrerit enim bibendum consectetur. Fusce diam est, porttitor vehicula gravida at, accumsan bibendum tincidunt imperdiet. Maecenas quis magna faucibus, varius ante sit amet, varius augue. Praesent aliquam, augue ac pulvinar accumsan</p>
+                            <h5>Where can I get some?</h5>
+                            <p>{{article.contenu}}</p>
+                        </div>
+                        <!-- .entry-content -->
+
+                        <!-- Post tags -->
+                        <hr>
+                        <div class="post-tags">
+                            <a href="#" rel="tag">chemicals</a>
+                            <a href="#" rel="tag">chemicals</a>
+                            <a href="#" rel="tag">chemicals</a>
+                            <a href="#" rel="tag">chemicals</a>
+                            <a href="#" rel="tag">chemicals</a>
+                            <a href="#" rel="tag">chemicals</a>
+                            <!-- // Post tags -->
+                        </div>
+                    </div>
+
+                    <div class="margin-bottom-30px">
+                        <div class="padding-30px background-white border-radius-10">
+                            <h4><i class="fas fa-comment-alt margin-right-10px text-main-color"></i> Comments (3)</h4>
+                            <hr>
+
+                            <ul class="commentlist padding-0px margin-0px list-unstyled text-grey-3">
+                                <li class="border-bottom-1 border-grey-1 margin-bottom-20px">
+                                    <img src="http://placehold.it/10x10" class="float-left margin-right-20px border-radius-60 margin-bottom-20px" alt="">
+                                    <div class="margin-left-85px">
+                                        <a class="d-inline-block text-dark text-medium margin-right-20px" href="#">Bakhita alrawi </a>
+                                        <span class="text-extra-small">Date :  <a href="#" class="text-main-color">July 15, 2016</a></span>
+                                        <p class="margin-top-15px text-grey-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                    </div>
+                                </li>
+                                <li class="border-bottom-1 border-grey-1 margin-left-55px margin-bottom-20px">
+                                    <img src="http://placehold.it/10x10" class="float-left margin-right-20px border-radius-60 margin-bottom-20px" alt="">
+                                    <div class="margin-left-85px">
+                                        <a class="d-inline-block text-dark text-medium margin-right-20px" href="#">Rabie Elkheir </a>
+                                        <span class="text-extra-small">Date :  <a href="#" class="text-main-color">July 15, 2016</a></span>
+                                        <p class="margin-top-15px text-grey-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                    </div>
+                                </li>
+                                <li class="border-bottom-1 border-grey-1 margin-bottom-20px">
+                                    <img src="http://placehold.it/10x10" class="float-left margin-right-20px border-radius-60 margin-bottom-20px" alt="">
+                                    <div class="margin-left-85px">
+                                        <a class="d-inline-block text-dark text-medium margin-right-20px" href="#">Adel Alsaeed </a>
+                                        <span class="text-extra-small">Date :  <a href="#" class="text-main-color">July 15, 2016</a></span>
+                                        <p class="margin-top-15px text-grey-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="margin-bottom-30px">
+                        <div class="padding-30px background-white border-radius-10">
+                            <h4><i class="fas fa-comment-alt margin-right-10px text-main-color"></i> Add Comment</h4>
+                            <hr>
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>Full Name</label>
+                                        <input type="text" class="form-control" id="inputName4" placeholder="Name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Comment :</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comment"></textarea>
+                                </div>
+                                <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase border-radius-10 padding-10px">Add Now !</a>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="margin-bottom-30px">
+                        <div class="padding-30px background-white border-radius-10">
+                            <h4><i class="fas fa-search margin-right-10px text-main-color"></i> Search</h4>
+                            <hr>
+                            <div class="input-group mb-3" style="margin-top: -5px;">
+                                <input  type="text" placeholder="Search..." class="form-control border-radius-0">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary text-white  border-radius-0" type="button" style="background: royalblue;">Search</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="widget widget_categories">
+                        <div class="margin-bottom-30px">
+                            <div class="padding-30px background-white border-radius-10">
+                                <h4><i class="far fa-folder-open margin-right-10px text-main-color"></i> Categories</h4>
+                                <hr>
+                                <ul>
+                                    <li><a href="#">Tech</a></li>
+                                    <li><a href="#">Gallary</a></li>
+                                    <li><a href="#">UI Design </a></li>
+                                    <li><a href="#">Shop</a></li>
+                                    <li><a href="#">Wordpress  </a></li>
+                                    <li><a href="#">Cultur</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget widget_categories">
+                        <div class="margin-bottom-30px">
+                            <div class="padding-30px background-white border-radius-10">
+                                <h4><i class="fab fa-instagram margin-right-10px text-main-color"></i> Instagram</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6 margin-bottom-20px"><a href="#"><img class="border-radius-10" src="http://placehold.it/60x60" alt=""></a></div>
+                                    <div class="col-6 margin-bottom-20px"><a href="#"><img class="border-radius-10" src="http://placehold.it/60x60" alt=""></a></div>
+                                    <div class="col-6 margin-bottom-20px"><a href="#"><img class="border-radius-10" src="http://placehold.it/60x60" alt=""></a></div>
+                                    <div class="col-6 margin-bottom-20px"><a href="#"><img class="border-radius-10" src="http://placehold.it/60x60" alt=""></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="padding-tb-100px background-main-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <a class="d-inline-block margin-tb-15px"><img src="assets/img/logo-2.png" alt=""></a>
+                </div>
+                <div class="col-lg-4">
+                    <p class="text-white opacity-7">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="footer-menu margin-tb-15px margin-lr-0px padding-0px list-unstyled float-lg-right">
+                        <li><a href="#" class="text-white">Featured</a></li>
+                        <li><a href="#" class="text-white">Feedback</a></li>
+                        <li><a href="#" class="text-white">Ask a Question</a></li>
+                        <li><a href="#" class="text-white">Team</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-white opacity-4 margin-tb-45px">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="margin-0px text-white opacity-7 sm-mb-15px">© 2018 tabib Health Directory | All Right Reserved. </p>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="social-icon style-2 float-lg-right">
+                        <li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li class="list-inline-item"><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a class="google" href="#"><i class="fab fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class="rss" href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script  src="assets/js/sticky-sidebar.js"></script>
+    <script  src="assets/js/YouTubePopUp.jquery.js"></script>
+    <script  src="assets/js/owl.carousel.min.js"></script>
+    <script  src="assets/js/imagesloaded.min.js"></script>
+    <script  src="assets/js/wow.min.js"></script>
+    <script  src="assets/js/custom.js"></script>
+    <script  src="assets/js/popper.min.js"></script>
+    <script  src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

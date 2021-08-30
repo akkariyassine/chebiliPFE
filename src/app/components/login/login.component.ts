@@ -76,10 +76,10 @@ export class LoginComponent implements OnInit {
               this.router.navigate(['/doctor-dashboard',this.data.data1.id])//.id
             }
             if(this.data.data1.role=="patient"){
-              this.router.navigate(['/home',this.data.data1.id])
+              this.router.navigate(['/patient-dashboard'])//,this.data.data1.id
             }
             if(this.data.data1.role=="admin"){
-              this.router.navigate(['/articles',this.data.data1.id])
+              this.router.navigate(['/admin/dashboard'])
             }
 
          this.toastr.success(JSON.stringify(this.data.message), JSON.stringify(this.data.code),
@@ -116,13 +116,13 @@ export class LoginComponent implements OnInit {
        if(this.data.status === 1){
             if(this.data.data1.role=="doctor"){
               this.form.reset();
-              this.router.navigate(['/doctor-dashboard'])//.id
+              this.router.navigate(['/doctor-dashboard'])////,this.data.data1.id
             }
             if(this.data.data1.role=="patient"){
-              this.router.navigate(['/home'])
+              this.router.navigate(['/patient-dashboard'])////,this.data.data1.id
             }
             if(this.data.data1.role=="admin"){
-              this.router.navigate(['/articles'])
+              this.router.navigate(['/admin/dashboard'])
             }
 
          this.toastr.success(JSON.stringify(this.data.message), JSON.stringify(this.data.code),

@@ -1,0 +1,261 @@
+<!DOCTYPE html> 
+<html lang="en">
+	
+<!-- doccure/doctor-register.html  30 Nov 2019 04:12:15 GMT -->
+<head>
+		<meta charset="utf-8">
+		<title>Doccure</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		
+		
+	
+	</head>
+	<body class="account-page">
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper" style="padding-top: 85px;">
+		
+			<!-- Header -->
+			<app-header></app-header>
+			<!-- /Header -->
+			
+			<!-- Page Content -->
+			<div class="content">
+				
+					<div class="row">
+            <div class="table-responsive">
+						
+							<!-- Account Content -->
+					    	<div class="account-content"  style="margin-left: 200px; width:max-content;">
+                                <div class="row" >
+                                  
+                                    <form [formGroup]="form" (ngSubmit)="onSubmit()"  *ngIf="data" >
+                                       
+                                        <div class="card" style="width: 900px;" >
+                                           <h5 class="card-header">Information pratiques </h5>
+                                           <div class="card-body">
+                                               <div class="form-group " >
+                                                   <label>langues parlé</label>
+                                           <!--ng-select [multiple]="true" --->	
+                                                    <select  formControlName="langue_parle"  class="form-control " [(ngModel)]="data.langue_parle" [ngClass]="{'is-invalid': submitted && f.langue_parle.errors}" >
+                                                       <option >Anglais</option>
+                                                       <option >Français</option>
+                                                       <option >Arabe</option>
+                                                       <option >Allemand</option>
+                                                    </select>
+                                                   <div *ngIf="submitted && f.langue_parle.errors" class="invalid-feedback">
+                                                     <div *ngIf="f.langue_parle.errors.required">
+                                                       Title is important <!--est obligatoire-->
+                                                     </div>
+                                                   </div>
+                                               </div>
+
+                                                <div class="form-group " >
+                                                <label>mode_reglement</label>
+                                                 <!--ng-select [multiple]="true" --->	
+                                                  <select  formControlName="mode_reglement"  class="form-control " [(ngModel)]="data.mode_reglement" [ngClass]="{'is-invalid': submitted && f.mode_reglement.errors}" >
+                                                    <option >cheques</option>
+                                                    <option >Especes</option>
+                                                    <option >carte</option>
+                                                  </select>
+                                                <div *ngIf="submitted && f.mode_reglement.errors" class="invalid-feedback">
+                                                  <div *ngIf="f.mode_reglement.errors.required">
+                                                    Title is important <!--est obligatoire-->
+                                                  </div>
+                                                </div>
+                                                </div>
+        
+                                               <div class="form-group " style="width: 225px; margin-left: 10px;">
+                                                   <label>Convention avec le CNAM</label>
+                                                   <div *ngIf="data.cnam==0"> 
+                                                    <input type="checkbox" value="0" formControlName="cnam"  class="form-control " [(ngModel)]="isnoChecked" [ngClass]="{'is-invalid': submitted && f.cnam.errors}" >
+                                                   </div>
+                                                   <div *ngIf="data.cnam==1"> 
+                                                    <input type="checkbox" value="1" formControlName="cnam"  class="form-control " [(ngModel)]="isChecked" [ngClass]="{'is-invalid': submitted && f.cnam.errors}" >
+                                                   </div>
+                                                   
+                                                </div>
+        
+        
+                                             </div>
+                                          </div>
+                                        
+                                        <div class="card" >
+                                            <h5 class="card-header">Horaires </h5>
+                                              <div class="card-body">
+                                                <div class="form-group " >
+                                                  <table>
+                                                
+                                                    <td style="width: 40px; color: white ;background-color: rgb(133, 189, 192); text-align: center;">
+                                                      lundi : 
+                                                    </td>
+                                                    <td>
+                                                      <input type="radio" >seance unique
+                                                      <input type="radio" > double seance 
+                                                      <input type="radio" >fermé
+                                                    </td>
+                                                    <tr>
+                                                        <td style="width: 40px; color: white ;background-color: rgb(133, 189, 192); text-align: center;">
+  
+                                                            mardi
+                                                        </td>
+                                                        <td>
+                                                          <input type="radio" >seance unique
+                                                          <input type="radio" > double seance 
+                                                          <input type="radio" >fermé
+                                                        </td>
+                                                      
+                                                    </tr>
+                                                    <tr>
+                                                      <td style="width: 40px; color: white ;background-color: rgb(133, 189, 192); text-align: center;">
+  
+                                                          Mercredi
+                                                      </td>
+                                                      <td>
+                                                        <input type="radio" >seance unique
+                                                        <input type="radio" > double seance 
+                                                        <input type="radio" >fermé
+                                                      </td>
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                      <td style="width: 40px; color: white ;background-color: rgb(133, 189, 192); text-align: center;">
+  
+                                                          Jeudi
+                                                      </td>
+                                                      <td>
+                                                        <input type="radio" >seance unique
+                                                        <input type="radio" > double seance 
+                                                        <input type="radio" >fermé
+                                                      </td>
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                      <td style="width: 40px; color: white ;background-color: rgb(133, 189, 192); text-align: center;">
+                                                          Vendredi
+                                                      </td>
+                                                      <td>
+                                                        <input type="radio" >seance unique
+                                                        <input type="radio" > double seance 
+                                                        <input type="radio" >fermé
+                                                      </td>
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                      <td style="width: 40px; color: white ;background-color: rgb(133, 189, 192); text-align: center;">
+  
+                                                          Samedi
+                                                      </td>
+                                                      <td>
+                                                        <input type="radio" >seance unique
+                                                        <input type="radio" > double seance 
+                                                        <input type="radio" >fermé
+                                                      </td>
+                                                    
+                                                    </tr>
+                                                    <tr>
+                                                      <td style="width: 40px; color: white ;background-color: rgb(133, 189, 192); text-align: center;">
+                                                          Dimanche
+                                                      </td>
+                                                      <td>
+                                                        <input type="radio" >seance unique
+                                                        <input type="radio" > double seance 
+                                                        <input type="radio" >fermé
+                                                      </td>
+                                                    
+                                                    </tr>
+                                                </table>
+                                                </div>
+ 
+                                              
+                                              </div>
+                                          </div>
+                                       <!--<div class="row">
+                                        <div class="col-sm-12">
+                                          <div class="card">
+                                            <div class="card-body">
+                                              <div class="table-responsive">
+                                                <table class="datatable table table-hover table-center mb-0">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Doctor Name</th>
+                                                      <th>Speciality</th>
+                                                      <th>Member Since</th>
+                                                      
+                                                      <th> Status</th>
+                                                      <th style="float: right ;">Actions</th>
+                                                      
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                            
+                                                    <tr >
+                                                      <td>
+                                                        
+                                                        <h2 class="table-avatar" >
+                                                          <a href="javascript:;"ngbTooltip="go to profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/admin/assets/img/doctors/doctor-thumb-06.jpg" alt="User Image"></a>
+                                                        </h2>
+                                                      </td>
+                                                      <td></td>
+                                                      
+                                                      <td><br><small>PM</small></td>
+                                                      
+                                                      
+                                                      <td >
+                                                        <div >
+                                                          <p class="text-success" type="text"  >is valide</p>
+                                                         </div>
+                                                      </td>
+                                                      
+                                                      <td>
+                                                       
+                                                      </td>
+                                                     
+                                                    </tr>
+                                                    
+                                                  </tbody>
+                                                </table>
+                            
+                                              
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>			
+                                       </div>-->
+        
+                                       <button type="submit" class="btn btn-primary" style="float: right;">Suivant</button>
+        
+                                     </form>	
+                                  
+                                </div>	
+                 </div>
+             <!-- /Account Content -->
+    
+            </div>
+
+          </div>
+
+      </div>	
+      <!-- /Page Content -->
+
+<!-- Footer -->
+<app-footer></app-footer>
+<!-- /Footer -->
+
+</div>
+<!-- /Main Wrapper -->
+
+<!-- jQuery -->
+<script src="assets/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/script.js"></script>
+
+</body>
+
+<!-- doccure/doctor-register.html  30 Nov 2019 04:12:16 GMT -->
+</html>

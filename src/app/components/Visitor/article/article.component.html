@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+<html lang="en">
+	
+<!-- doccure/search.html  30 Nov 2019 04:12:16 GMT -->
+<head>
+		<meta charset="utf-8">
+		<title>Doccure</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		
+	</head>
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+		
+			<!-- Header -->
+			<app-header></app-header>
+			<!-- /Header -->
+			
+			<!-- Breadcrumb -->
+			<div class="breadcrumb-bar" style="background-color: #007bff; height: 90px; margin-top: 85px;">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-md-8 col-12">
+							<nav aria-label="breadcrumb" class="page-breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="/home">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Search Article</li>
+								</ol>
+							</nav>
+							<h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2>
+						</div>
+						<div class="col-md-4 col-12 d-md-block d-none" style="margin-left: 1000px; margin-top: -30px;">
+							<div class="sort-by">
+								<span class="sort-title">Sort by</span>
+								<span class="sortby-fliter">
+									<select class="select"  style="width: 100px;">
+										<option>Select</option>
+										<option class="sorting">Rating</option>
+										<option class="sorting">Popular</option>
+										<option class="sorting">Latest</option>
+										<option class="sorting">Free</option>
+									</select>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Breadcrumb -->
+            <div class="content">
+				<div class="container-fluid">
+
+					<div class="row">
+						<div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar" >
+						
+							<!-- Search Filter -->
+							<div class="card search-filter" style="width: 324px; margin-left: 970px; ">
+								<div class="card-header">
+									<h4 class="card-title mb-0">Search Filter</h4>
+								</div>
+								<div class="card-body">
+								<div class="filter-widget">
+									
+										<input type="text" [(ngModel)]="searchFilter" class="form-control " placeholder="Search">
+											
+								</div>
+								
+								<div class="filter-widget">
+									<h4>Select Specialist</h4>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist" checked>
+											<span class="checkmark"></span> Urology
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist" checked>
+											<span class="checkmark"></span> Neurology
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Dentist
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Orthopedic
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Cardiologist
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Cardiologist
+										</label>
+									</div>
+								</div>
+									<div class="btn-search">
+										<button type="button" class="btn btn-block">Search</button>
+									</div>	
+								</div>
+							</div>
+							<!-- /Search Filter -->
+							
+						</div>
+						
+						<div class="col-md-12 col-lg-8 col-xl-9">
+
+                            <!--------------------card Article----------
+                            <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
+                                <div class="row no-gutters">
+                                    <div class="img-in col-lg-5"><a href="#"><img src="http://placehold.it/400x240" alt=""></a></div>
+                                    <div class="col-lg-7">
+                                        <div class="padding-25px">
+                                            <a class="d-block h4  text-capitalize margin-bottom-8px" href="#">Lorem Ipsum Dolor Sit amet, Consectetur Adipisicing Elit, Sed Do Eiusmod Tempor Incididunt </a>
+                                            <div class="meta">
+                                                <span class="margin-right-20px text-extra-small">By : <a href="#" class="text-main-color">Rabie Elkheir</a></span>
+                                                <span class="margin-right-20px text-extra-small">Date :  <a href="#" class="text-main-color">July 15, 2016</a></span>
+                                                <span class="text-extra-small">Categorie :  <a href="#" class="text-main-color">Arts</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>--->
+
+
+<!---------- Doctor Widget --------------------------------->
+							<div class="card" style="margin-left:-220px; width: 950px; height: 280px;" *ngFor="let article of articles |filter:searchFilter | paginate: { itemsPerPage: 5, currentPage: p }">
+								<div class="card-body" >
+									<div class="doctor-widget">
+										<div class="doc-info-left" >
+											<div class="doctor-img" style="width: 400px; margin-right: 50px;" >
+												<a href="javascript:;">
+													<img src="assets/img/img-03.jpg" (click)="goDetail(article)"  style=" height: 240px; width: 380px;"alt="User Image" >
+												</a>
+											</div>
+											<div class="doc-info-cont" *ngIf="article.writtenBy=='doctor' ">
+												<h2><a href="javascript:;"  (click)="goDetail(article)" style="color: rgb(28, 41, 35);">{{article.titre}}</a></h2>
+												<h5 class="doc-department">												
+													<span class="margin-right-20px text-extra-small"><br>
+														<i class="far fa-user text-grey-2" ></i> By : <a href="javascript:;" (click)="goDoctor(article)" >{{article.firstname}} {{article.lastname}} </a></span>
+													</h5><p class="doc-speciality">{{article.principale_speciality}}</p>
+													<p class="doc-speciality"> Categorie:  {{article.categorie}} </p>
+
+												<span class="text-extra-small"><i class="far fa-clock text-grey-2"></i> Date :  <a href="#"> {{article.date}} ,{{article.heure}}</a></span>
+											<br>	<a href="javascript:;"  (click)="goDetail(article)"  style="float:right;">read more -></a>
+							
+												
+											</div>
+											<div class="doc-info-cont" *ngIf="article.writtenBy=='admin' ">
+												<h2><a href="javascript:;"  (click)="goDetail(article)" style="color: rgb(28, 41, 35);">{{article.titre}}</a></h2>
+												<h5 class="doc-department">												
+													<span class="margin-right-20px text-extra-small"><br>
+														<i class="far fa-user text-grey-2" ></i> By : <a href="javascript:;" (click)="goDoctor(article)" >Admin </a></span>
+													</h5><p class="doc-speciality">{{article.principale_speciality}}</p>
+													<p class="doc-speciality"> Categorie:  {{article.categorie}} </p>
+
+												<span class="text-extra-small"><i class="far fa-clock text-grey-2"></i> Date :  <a href="#"> {{article.date}} ,{{article.heure}}</a></span>
+											<br>	<a href="javascript:;"  (click)="goDetail(article)"  style="float:right;">read more -></a>
+							
+												
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+                          
+							<div class="load-more text-center">
+								<pagination-controls (pageChange)="p = $event" style="float: right;"></pagination-controls>
+
+							</div>	
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		
+
+
+       <app-footer></app-footer>
+     </div>
+    </body>
+</html>

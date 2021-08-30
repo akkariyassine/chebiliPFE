@@ -1,14 +1,31 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
 import { catchError, filter, take, switchMap } from 'rxjs/operators';
-import { AuthService } from 'src/app/service/auth.service';
+import { AuthentificationService } from 'src/app/service/authentification.service';
+//import { AuthService } from 'src/app/service/auth.service';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
+ 
+  constructor( private injector:Injector) { }
 
-  private isRefreshing = false;
+ intercept(req :any,next:any){
+   let authService=this.injector.get(AuthentificationService)
+   let tokenizedReq=req.clone({
+
+setHeaders:{
+  Authorization:`Bearer ${ authService.getToken()}`
+}
+
+   })
+   return next.handle(tokenizedReq)
+ }
+
+}
+
+ /* private isRefreshing = false;
   private refreshTokenSubject: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
   constructor(public authService: AuthService) { }
@@ -57,4 +74,4 @@ export class TokenInterceptor implements HttpInterceptor {
         }));
     }
   }
-}
+}*/

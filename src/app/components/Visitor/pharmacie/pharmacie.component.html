@@ -1,0 +1,442 @@
+<!DOCTYPE html> 
+<html lang="en">
+	
+<!-- doccure/search.html  30 Nov 2019 04:12:16 GMT -->
+<head>
+		<meta charset="utf-8">
+		<title>Doccure</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		
+		
+		
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	
+	</head>
+	<body>
+
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+		
+			<!-- Header -->
+			<header class="header"  >
+				<nav class="navbar navbar-expand-lg header-nav" ><!--style="height: 75px; "-->
+					<div class="navbar-header">
+						<a id="mobile_btn" href="javascript:void(0);">
+							<span class="bar-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+						<a routerLink="/home" class="navbar-brand logo">
+							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+						</a>
+					</div>
+					<div class="main-menu-wrapper " >
+						<div class="menu-header">
+							<a routerLink="/home" class="menu-logo">
+								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+							</a>
+							<a id="menu_close" class="menu-close" href="javascript:void(0);">
+								<i class="fas fa-times"></i>
+							</a>
+						</div>
+						<ul class="main-nav" style="margin-left: 20px;">
+							<li >
+								<a routerLink="/home">Home</a>
+							</li >
+							<li >
+								<a routerLink="/search-Doctor">Doctors <i ></i></a>
+							   
+							</li>	
+							<li class="active">
+								<a routerLink="/search-Pharmacie">pharmacies <i ></i></a>
+							   
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/articles">Articles <i ></i></a>
+								
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/tarif">Tarif <i></i></a>
+								
+							</li>
+							<li>
+								<a routerLink="admin/index.html" >Conference</a>
+							</li>
+			
+							<li>
+								<a routerLink="/about" >About-US</a>
+							</li>
+							<li>
+								<a routerLink="/contact-us" >Contact-US</a>
+							</li>
+						   
+						</ul>		 
+					</div>		 
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item">
+							<button class=" info btn1" routerLink="/test">Testing Now</button>
+							<!-- <a class="  info appointment-btn btn1"  routerLink="/test">Testing Now</a>-->
+						</li>
+						<li class="nav-item">
+							<a class="nav-link header-login" routerLink="/login">login / Signup </a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<!-- /Header -->
+			
+			<!-- Breadcrumb -->
+			<app-breadcrumb></app-breadcrumb>
+			<!-- /Breadcrumb -->
+			
+			<!-- Page Content -->
+			<div class="content">
+				<div class="container-fluid">
+
+					<div class="row" style="width: 100%;">
+						<div class="col" style="width: 40%;"  >
+						
+							<!-- Search Filter -->
+							<div class="card search-filter" style="width: 300px;" >
+								<div class="card-header">
+									<h4 class="card-title mb-0">Search Filter</h4>
+								</div>
+								<div class="card-body">
+								<div class="filter-widget">
+									<div class="cal-icon">
+										<input type="text" class="form-control datetimepicker" placeholder="Select Date">
+										
+									</div>	
+											
+								</div>
+								<div class="filter-widget">
+									<h4>Gender</h4>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="gender_type" checked>
+											<span class="checkmark"></span> Male Doctor
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="gender_type">
+											<span class="checkmark"></span> Female Doctor
+										</label>
+									</div>
+								</div>
+								<div class="filter-widget">
+									<h4>Select Specialist</h4>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist" checked>
+											<span class="checkmark"></span> Urology
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist" checked>
+											<span class="checkmark"></span> Neurology
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Dentist
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Orthopedic
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Cardiologist
+										</label>
+									</div>
+									<div>
+										<label class="custom_check">
+											<input type="checkbox" name="select_specialist">
+											<span class="checkmark"></span> Cardiologist
+										</label>
+									</div>
+								</div>
+									<div class="btn-search">
+										<button type="button" class="btn btn-block">Search</button>
+									</div>	
+								</div>
+							</div>
+							<!-- /Search Filter -->
+							
+						
+						
+                      <div class="col" style="width: 100%;">
+                        <br> <div style="background-color: transparent">
+							<ul ngbNav #nav="ngbNav" class="nav-tabs" style="background-color: transparent; border-color: white ;color: black;">
+								<li ngbNavItem>
+								<a ngbNavLink>Doctors</a>
+								<ng-template ngbNavContent >
+									<div class="search-box">
+										<form [formGroup]="form" (ngSubmit)="Doctors()">
+											
+											<div class="form-row">
+												<div class="form-group col-md-3">
+												  <input type="text" name="name" formControlName="name" placeholder="Name of doctor" class="form-control" >
+												</div>
+
+												<div class="form-group ">
+												  <select name="speciality" formControlName="speciality" class="form-control"    style="width: 150px; margin-right: 5px;" >
+													<option selected disabled >Speciality</option>
+													<option selected >Speciality</option>
+													<option  *ngFor="let speciality of specialities" value="{{speciality.name}}">{{speciality.name}}</option>
+												  </select>
+												</div>
+
+												<div class="form-group ">
+													<select name="pays" formControlName="pays" class="form-control" style="width: 150px; margin-right: 5px;" (change)="getGouvernorat($event)">
+													  <option selected disabled >Country</option>
+													  <option  *ngFor="let country of pays" value="{{country.name_pays}}">{{country.name_pays}}</option>
+													</select>
+												  </div>
+
+												  <div class="form-group ">
+													<select name="gouvernorat"  class="form-control" formControlName="gouvernorat" style="width: 150px; margin-right: 10px;">
+													  <option selected disabled>City</option>
+													  <option  *ngFor="let city of cities">{{city.name_gouv}}</option>
+													</select>
+												  </div>
+												 
+												  <button type="submit" style="background-color: #009efb" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
+
+											  </div>
+			
+											
+										</form>
+									</div>
+								</ng-template>
+								</li>
+								
+								<li ngbNavItem>
+								<a ngbNavLink>
+									pharmacy </a>
+								<ng-template ngbNavContent>
+									<div class="form-row">
+										<div class="form-group col-md-3">
+										  <input type="text" placeholder="pharmacy's name" class="form-control" id="inputCity">
+										</div>
+
+										<div class="form-group ">
+										  <select id="inputState" class="form-control" style="width: 150px; margin-right: 5px;">
+											<option selected>Country</option>
+											<option>...</option>
+										  </select>
+										</div>
+
+										<div class="form-group ">
+											<select id="inputState" class="form-control" style="width: 150px; margin-right: 5px;">
+											  <option selected>City</option>
+											  <option>...</option>
+											</select>
+										  </div>
+
+										  <div class="form-group ">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+												<label class="form-check-label" for="gridRadios1">
+												  Open
+												</label>
+											</div>
+										  </div>
+
+										  <div class="form-group ">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+												<label class="form-check-label" for="gridRadios1">
+												  Day
+												</label>
+											</div>
+										</div>
+										
+										<div class="form-group ">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+												<label class="form-check-label" for="gridRadios1">
+												  Night
+												</label>
+											</div>
+										</div>
+
+										<div class="form-group ">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+												<label class="form-check-label" for="gridRadios1">
+												  Guard
+												</label>
+											</div>
+											<button type="submit" style="background-color: #009efb" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
+
+										  </div>
+									</div>
+								</ng-template>
+								</li>
+
+
+								<li ngbNavItem>
+									<a ngbNavLink>	medicine </a>
+									<ng-template ngbNavContent>
+										<div class="search-box">
+											<form action="templateshub.net">
+												
+												<div class="form-group search-info">
+													<input type="text" class="form-control"   placeholder="Search Medecine's name, Clinics, Hospitals, Diseases Etc">
+													<span class="form-text">Ex : Dental or Sugar Check up etc</span>
+												</div>
+												<button type="submit" style="background-color: #009efb" class="btn btn-primary search-btn"><i class="fas fa-search"></i> <span>Search</span></button>
+											
+				
+												
+											</form>
+							 </div>
+									</ng-template>
+								</li>
+								<li ngbNavItem>
+									<a ngbNavLink>Questions </a>
+									<ng-template ngbNavContent>
+										<p>Because default values have been customized in the config</p>
+									</ng-template>
+								</li>
+
+						  </ul>
+						  
+						  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+						</div>
+                      </div>
+						<div class="col" style="width: 60%;" >
+
+							<!-- Doctor Widget -->
+							<div  class="card"  *ngFor="" style="width: 970px;">
+								<div class="card-body" >
+									<div class="doctor-widget">
+										<div class="doc-info-left">
+											<div class="doctor-img">
+												
+													<img src="assets/img/doctors/doctor-thumb-01.jpg" class="img-fluid" alt="User Image" >
+												 
+											</div>
+											<div class="doc-info-cont" style="margin-left: 20px;">
+												<h4 class="doc-name"><a routerLink="/doctor-profile">Dr. doctor.firstname_doc}  doctor.lastname_doc}}</a></h4>
+												<p class="doc-speciality">doctor.principale_speciality</p>
+												<h5 class="doc-department"><img src="assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</h5>
+												<div class="rating">
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star filled"></i>
+													<i class="fas fa-star"></i>
+													<span class="d-inline-block average-rating">(17)</span>
+												</div>
+												<div class="clinic-details">
+													<p class="doc-location"><i class="fas fa-map-marker-alt"></i>doctor.delegation doctor.gouvernorat}}, doctor.pays}}</p>
+													<ul class="clinic-gallery">
+														<li>
+															<a href="assets/img/features/feature-01.jpg" data-fancybox="gallery">
+																<img src="assets/img/features/feature-01.jpg" alt="Feature">
+															</a>
+														</li>
+														<li>
+															<a href="assets/img/features/feature-02.jpg" data-fancybox="gallery">
+																<img  src="assets/img/features/feature-02.jpg" alt="Feature">
+															</a>
+														</li>
+														<li>
+															<a href="assets/img/features/feature-03.jpg" data-fancybox="gallery">
+																<img src="assets/img/features/feature-03.jpg" alt="Feature">
+															</a>
+														</li>
+														<li>
+															<a href="assets/img/features/feature-04.jpg" data-fancybox="gallery">
+																<img src="assets/img/features/feature-04.jpg" alt="Feature">
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="clinic-services">
+													<span>Dental Fillings</span>
+													<span> Whitneing</span>
+												</div>
+											</div>
+										</div>
+										<div class="doc-info-right" style="margin-top: 60px;margin-right: 50px; ">
+											
+											<div class="clinic-booking" >
+												<a class="view-pro-btn" routerLink="">View Profile</a>
+												<a class="apt-btn" routerLink="booking.html">Book Appointment</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /Doctor Widget -->
+
+							
+							<!-- /Doctor Widget -->
+
+							<!-- Doctor Widget -->
+							
+							<!-- /Doctor Widget -->
+
+							
+							
+						</div>
+					</div>
+
+				</div></div>
+
+			</div>		
+			<!-- /Page Content -->
+   
+			<!-- Footer -->
+			<app-footer></app-footer>
+			<!-- /Footer -->
+
+		</div>
+		<!-- /Main Wrapper -->
+	  
+		<!-- jQuery -->
+		<script src="assets/js/jquery.min.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- Sticky Sidebar JS -->
+        <script src="assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+        <script src="assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+		
+		<!-- Select2 JS -->
+		<script src="assets/plugins/select2/js/select2.min.js"></script>
+		
+		<!-- Datetimepicker JS -->
+		<script src="assets/js/moment.min.js"></script>
+		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+		
+		<!-- Fancybox JS -->
+		<script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+		
+		<!-- Custom JS -->
+		<script src="assets/js/script.js"></script>
+		
+	</body>
+
+<!-- doccure/search.html  30 Nov 2019 04:12:16 GMT -->
+</html>

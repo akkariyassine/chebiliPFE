@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Doctor } from 'src/app/models/doctor';
 import { DataService } from 'src/app/service/data.service';
 
@@ -9,17 +10,26 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class DoctorSearchComponent implements OnInit {
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,
+              private router: Router) 
+    { }
   //doctors:new Doctor();
   doctors:any;
+
   ngOnInit(): void {
     this.getDoctor();
   }
+  onClicked(doc:any){
+
+    this.router.navigate(['/doctor-profile', doc.id]);
+  }
 
   getDoctor(){
-    this.dataService.getallDoctor().subscribe(res=>{
-      this.doctors=res
-      console.log(this.doctors=res)   ;
+    this.dataService.getallDoctorVisitor().subscribe(res=>{
+      this.doctors=JSON.parse(res);
+      console.log(JSON.parse(res))
+    //  console.log(res)
+     
     })
   }
 }

@@ -22,50 +22,90 @@
 		<div class="main-wrapper">
 		
 			<!-- Header -->
-			<app-header></app-header>
+			<header class="header"  >
+				<nav class="navbar navbar-expand-lg header-nav" ><!--style="height: 75px; "-->
+					<div class="navbar-header">
+						<a id="mobile_btn" href="javascript:void(0);">
+							<span class="bar-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+						<a routerLink="/home" class="navbar-brand logo">
+							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+						</a>
+					</div>
+					<div class="main-menu-wrapper " >
+						<div class="menu-header">
+							<a routerLink="/home" class="menu-logo">
+								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+							</a>
+							<a id="menu_close" class="menu-close" href="javascript:void(0);">
+								<i class="fas fa-times"></i>
+							</a>
+						</div>
+						<ul class="main-nav" style="margin-left: 20px;">
+							<li >
+								<a routerLink="/home">Home</a>
+							</li >
+							<li class="active">
+								<a routerLink="/search-Doctor">Doctors <i ></i></a>
+							   
+							</li>	
+							<li class="has-submenu">
+								<a routerLink="/search-Pharmacie">pharmacies <i ></i></a>
+							   
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/articles">Articles <i ></i></a>
+								
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/tarif">Tarif <i></i></a>
+								
+							</li>
+							<li>
+								<a routerLink="admin/index.html" >Conference</a>
+							</li>
+			
+							<li>
+								<a routerLink="/about" >About-US</a>
+							</li>
+							<li>
+								<a routerLink="/contact-us" >Contact-US</a>
+							</li>
+						   
+						</ul>		 
+					</div>		 
+					<ul class="nav header-navbar-rht">
+						<li class="nav-item">
+							<button class=" info btn1" routerLink="/test">Testing Now</button>
+							<!-- <a class="  info appointment-btn btn1"  routerLink="/test">Testing Now</a>-->
+						</li>
+						<li class="nav-item">
+							<a class="nav-link header-login" routerLink="/login">login / Signup </a>
+						</li>
+					</ul>
+				</nav>
+			</header>
 			<!-- /Header -->
 			
 			<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<div class="col-md-8 col-12">
-							<nav aria-label="breadcrumb" class="page-breadcrumb">
-								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Search</li>
-								</ol>
-							</nav>
-							<h2 class="breadcrumb-title">2245 matches found for : Dentist In Bangalore</h2>
-						</div>
-						<div class="col-md-4 col-12 d-md-block d-none">
-							<div class="sort-by">
-								<span class="sort-title">Sort by</span>
-								<span class="sortby-fliter">
-									<select class="select">
-										<option>Select</option>
-										<option class="sorting">Rating</option>
-										<option class="sorting">Popular</option>
-										<option class="sorting">Latest</option>
-										<option class="sorting">Free</option>
-									</select>
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<app-breadcrumb></app-breadcrumb>
 			<!-- /Breadcrumb -->
 			
 			<!-- Page Content -->
 			<div class="content">
 				<div class="container-fluid">
 
-					<div class="row">
-						<div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar" >
+					<div class="row" style="width: 100%;">
+						<div class="col" style="width: 40%;"  >
 						
 							<!-- Search Filter -->
-							<div class="card search-filter" style="width: 324px; ">
+							<div class="card search-filter" style="width: 300px;" >
 								<div class="card-header">
 									<h4 class="card-title mb-0">Search Filter</h4>
 								</div>
@@ -73,7 +113,9 @@
 								<div class="filter-widget">
 									<div class="cal-icon">
 										<input type="text" class="form-control datetimepicker" placeholder="Select Date">
-									</div>			
+										
+									</div>	
+											
 								</div>
 								<div class="filter-widget">
 									<h4>Gender</h4>
@@ -136,22 +178,24 @@
 							</div>
 							<!-- /Search Filter -->
 							
+						
 						</div>
 						
-						<div class="col-md-12 col-lg-8 col-xl-9">
+						
+						<div class="col" style="width: 60%;" >
 
 							<!-- Doctor Widget -->
-							<div  class="card" style="margin-left: 150px; width: 930px;"*ngFor="let doctor of doctors" >
-								<div class="card-body" style="margin-left: 30px;">
+							<div  class="card"   style="width: 970px;" *ngFor="let doctor of doctors" >
+								<div class="card-body" >
 									<div class="doctor-widget">
 										<div class="doc-info-left">
 											<div class="doctor-img">
-												<a routerLink="/doctor-profile">
-													<img src="assets/img/doctors/doctor-thumb-01.jpg" class="img-fluid" alt="User Image">
-												</a>
+												
+													<img src="assets/img/doctors/doctor-thumb-01.jpg" class="img-fluid" alt="User Image" (click)="onClicked(doctor)">
+												 
 											</div>
 											<div class="doc-info-cont" style="margin-left: 20px;">
-												<h4 class="doc-name"><a routerLink="/doctor-profile">Dr. {{doctor.firstname}} {{doctor.lastname}}</a></h4>
+												<h4 class="doc-name"><a routerLink="/doctor-profile">Dr. {{doctor.firstname_doc}} {{doctor.lastname_doc}}</a></h4>
 												<p class="doc-speciality">{{doctor.principale_speciality}}</p>
 												<h5 class="doc-department"><img src="assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</h5>
 												<div class="rating">
@@ -196,8 +240,8 @@
 										<div class="doc-info-right" style="margin-top: 60px;margin-right: 50px; ">
 											
 											<div class="clinic-booking" >
-												<a class="view-pro-btn" routerLink="/doctor-profile">View Profile</a>
-												<a class="apt-btn" routerLink="booking.html">Book Appointment</a>
+												<a class="view-pro-btn" routerLink="">View Profile</a>
+												<a class="apt-btn" routerLink="/booking">Book Appointment</a>
 											</div>
 										</div>
 									</div>

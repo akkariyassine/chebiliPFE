@@ -20,7 +20,7 @@
 			<!-- /Header -->
 			
 			<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
+			<div class="breadcrumb-bar" style="background-color: #007bff; height: 90px; margin-top: 85px;">
 				<div class="container-fluid">
 					<div class="row align-items-center">
 						<div class="col-md-12 col-12">
@@ -42,16 +42,16 @@
 				<div class="container">
 
 					<!-- Doctor Widget -->
-					<div class="card">
-						<div class="card-body">
+					<div class="card" >
+						<div class="card-body" *ngIf="doctor">
 							<div class="doctor-widget">
 								<div class="doc-info-left">
 									<div class="doctor-img">
 										<img src="assets/img/doctors/doctor-thumb-02.jpg" class="img-fluid" alt="User Image">
 									</div>
 									<div class="doc-info-cont">
-										<h4 class="doc-name">Dr. Darren Elder</h4>
-										<p class="doc-speciality">BDS, MDS - Oral & Maxillofacial Surgery</p>
+										<h4 class="doc-name">Dr. {{doctor.firstname}} {{doctor.lastname}}</h4>
+										<p class="doc-speciality">{{doctor.principale_speciality}}</p>
 										<p class="doc-department"><img src="assets/img/specialities/specialities-05.png" class="img-fluid" alt="Speciality">Dentist</p>
 										<div class="rating">
 											<i class="fas fa-star filled"></i>
@@ -62,7 +62,7 @@
 											<span class="d-inline-block average-rating">(35)</span>
 										</div>
 										<div class="clinic-details">
-											<p class="doc-location"><i class="fas fa-map-marker-alt"></i> Newyork, USA - <a href="javascript:void(0);">Get Directions</a></p>
+											<p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{doctor.delegation}},{{doctor.gouvernorat}},{{doctor.pays}} - <a href="javascript:void(0);">Get Directions</a></p>
 											<ul class="clinic-gallery">
 												<li>
 													<a href="assets/img/features/feature-01.jpg" data-fancybox="gallery">
@@ -125,14 +125,14 @@
 					<!-- /Doctor Widget -->
 					
 					<!-- Doctor Details Tab -->
-					<div class="card">
+					<div class="card" *ngIf="doctor">
 						<div class="card-body pt-0">
 						
 							<!-- Tab Menu -->
 							<nav class="user-tabs mb-4">
 								<ul class="nav nav-tabs nav-tabs-bottom nav-justified">
 									<li class="nav-item">
-										<a class="nav-link active" href="#doc_overview" data-toggle="tab">Overview</a>
+										<a class="nav-link active" href="#doc_overview" data-toggle="tab">Overview  </a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" href="#doc_locations" data-toggle="tab">Locations</a>

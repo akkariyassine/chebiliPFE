@@ -7,8 +7,7 @@
 		<title>Doccure</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 		
-	
-	
+		
 	</head>
 	<body>
 
@@ -26,13 +25,13 @@
 								<span></span>
 							</span>
 						</a>
-						<a routerLink="/home" class="navbar-brand logo">
+						<a href="index-2.html" class="navbar-brand logo">
 							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
 						</a>
 					</div>
 					<div class="main-menu-wrapper">
 						<div class="menu-header">
-							<a routerLink="/home" class="menu-logo">
+							<a href="index-2.html" class="menu-logo">
 								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
 							</a>
 							<a id="menu_close" class="menu-close" href="javascript:void(0);">
@@ -41,17 +40,65 @@
 						</div>
 						<ul class="main-nav">
 							<li>
-								<a routerLink="/home">Home</a>
+								<a href="index-2.html">Home</a>
 							</li>
 							<li class="has-submenu active">
 								<a href="#">Doctors <i class="fas fa-chevron-down"></i></a>
-								
+								<ul class="submenu">
+									<li class="active"><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
+									<li><a href="appointments.html">Appointments</a></li>
+									<li><a href="schedule-timings.html">Schedule Timing</a></li>
+									<li><a href="my-patients.html">Patients List</a></li>
+									<li><a href="patient-profile.html">Patients Profile</a></li>
+									<li><a href="chat-doctor.html">Chat</a></li>
+									<li><a href="invoices.html">Invoices</a></li>
+									<li><a href="doctor-profile-settings.html">Profile Settings</a></li>
+									<li><a href="reviews.html">Reviews</a></li>
+									<li><a href="doctor-register.html">Doctor Register</a></li>
+								</ul>
 							</li>	
 							<li class="has-submenu">
 								<a href="#">Patients <i class="fas fa-chevron-down"></i></a>
-							
+								<ul class="submenu">
+									<li><a href="search.html">Search Doctor</a></li>
+									<li><a href="doctor-profile.html">Doctor Profile</a></li>
+									<li><a href="booking.html">Booking</a></li>
+									<li><a href="checkout.html">Checkout</a></li>
+									<li><a href="booking-success.html">Booking Success</a></li>
+									<li><a href="patient-dashboard.html">Patient Dashboard</a></li>
+									<li><a href="favourites.html">Favourites</a></li>
+									<li><a href="chat.html">Chat</a></li>
+									<li><a href="profile-settings.html">Profile Settings</a></li>
+									<li><a href="change-password.html">Change Password</a></li>
+								</ul>
 							</li>	
-							
+							<li class="has-submenu">
+								<a href="#">Pages <i class="fas fa-chevron-down"></i></a>
+								<ul class="submenu">
+									<li><a href="voice-call.html">Voice Call</a></li>
+									<li><a href="video-call.html">Video Call</a></li>
+									<li><a href="search.html">Search Doctors</a></li>
+									<li><a href="calendar.html">Calendar</a></li>
+									<li><a href="components.html">Components</a></li>
+									<li class="has-submenu">
+										<a href="invoices.html">Invoices</a>
+										<ul class="submenu">
+											<li><a href="invoices.html">Invoices</a></li>
+											<li><a href="invoice-view.html">Invoice View</a></li>
+										</ul>
+									</li>
+									<li><a href="blank-page.html">Starter Page</a></li>
+									<li><a href="login.html">Login</a></li>
+									<li><a href="register.html">Register</a></li>
+									<li><a href="forgot-password.html">Forgot Password</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="admin/index.html" target="_blank">Admin</a>
+							</li>
+							<li class="login-link">
+								<a href="login.html">Login / Signup</a>
+							</li>
 						</ul>	 
 					</div>		 
 					<ul class="nav header-navbar-rht">
@@ -95,13 +142,13 @@
 			<!-- /Header -->
 			
 			<!-- Breadcrumb -->
-			<div class="breadcrumb-bar">
+			<div class="breadcrumb-bar" style="margin-top: 85px; height: 90px; background-color: #007bff;">
 				<div class="container-fluid">
 					<div class="row align-items-center">
 						<div class="col-md-12 col-12">
 							<nav aria-label="breadcrumb" class="page-breadcrumb">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+									<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
 									<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
 								</ol>
 							</nav>
@@ -117,20 +164,20 @@
 				<div class="container-fluid">
 
 					<div class="row">
-						<div class="col-md-6 col-lg-4 col-xl-3 theiaStickySidebar">
+						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
 							
 							<!-- Profile Sidebar -->
-							<div  class="profile-sidebar" style="width: 300px; ">
+							<div class="profile-sidebar">
 								<div class="widget-profile pro-widget-content">
 									<div class="profile-info-widget">
 										<a href="#" class="booking-doc-img">
 											<img src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image">
 										</a>
-										<div *ngIf="doctor" class="profile-det-info"><!--*ngIf="doctor"-->
-											<h3>Dr. {{doctor.firstname}} {{doctor.firstname}} </h3><!--{{doctor.firstname}}-->
+										<div class="profile-det-info">
+											<h3>Dr. Darren Elder</h3>
 											
 											<div class="patient-details">
-												<h5 class="mb-0">{{doctor.principale_speciality}}</h5>
+												<h5 class="mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
 											</div>
 										</div>
 									</div>
@@ -166,6 +213,12 @@
 												<a routerLink="/invoices">
 													<i class="fas fa-file-invoice"></i>
 													<span>Invoices</span>
+												</a>
+											</li>
+											<li>
+												<a routerLink="/myArticle">
+													<i class="fas fa-file-invoice"></i>
+													<span>my Article</span>
 												</a>
 											</li>
 											<li>
@@ -213,9 +266,9 @@
 							
 						</div>
 						
-						<div class="col-md-7 col-lg-8 col-xl-9" >
+						<div class="col-md-7 col-lg-8 col-xl-9">
 
-							<div class="row" style="margin-left: 110px; width: 980px;">
+							<div class="row"  style="margin-left: 100px; width: 1000px;">
 								<div class="col-md-12">
 									<div class="card dash-card">
 										<div class="card-body">
@@ -224,24 +277,28 @@
 													<div class="dash-widget dct-border-rht">
 														<div class="circle-bar circle-bar1">
 															<div class="circle-graph1" data-percent="75">
-                                                                <i class="far fa-circle" style="font-size: 100px; color: rgb(226, 45, 130);"></i>
-																<img src="assets/img/icon-01.png"  alt="patient" style="margin-left: 35px;">
+																<i class="far fa-circle"
+																	style="font-size: 100px; color: rgb(226, 45, 130);"></i>
+																<img src="assets/img/icon-01.png" alt="patient"
+																	style="margin-left: 35px;">
 															</div>
 														</div>
-														<div class="dash-widget-info" >
+														<div class="dash-widget-info" *ngIf="patt" >
 															<h6>Total Patient</h6>
-															<h3>1500</h3>
+															<h3>{{patt.number}}</h3>
 															<p class="text-muted">Till Today</p>
 														</div>
 													</div>
 												</div>
-												
+	
 												<div class="col-md-12 col-lg-4">
 													<div class="dash-widget dct-border-rht">
-														<div class="circle-bar circle-bar2" >
-                                                            <i class="far fa-circle" style="font-size: 100px; color: rgba(41, 238, 74, 0.774);"></i>
+														<div class="circle-bar circle-bar2">
+															<i class="far fa-circle"
+																style="font-size: 100px; color: rgba(41, 238, 74, 0.774);"></i>
 															<div class="circle-graph2" data-percent="65">
-																<img src="assets/img/icon-02.png"  alt="Patient" style="margin-left:-65px; margin-top: -35px;">
+																<img src="assets/img/icon-02.png" alt="Patient"
+																	style="margin-left:-65px; margin-top: -35px;">
 															</div>
 														</div>
 														<div class="dash-widget-info">
@@ -251,18 +308,20 @@
 														</div>
 													</div>
 												</div>
-												
+	
 												<div class="col-md-12 col-lg-4">
 													<div class="dash-widget">
 														<div class="circle-bar circle-bar3">
 															<div class="circle-graph3" data-percent="50">
-                                                                <i class="far fa-circle" style="font-size: 100px; color: rgba(41, 149, 238, 0.774);"></i>
-																<img src="assets/img/icon-03.png" class="img-fluid" alt="Patient">
+																<i class="far fa-circle"
+																	style="font-size: 100px; color: rgba(41, 149, 238, 0.774);"></i>
+																<img src="assets/img/icon-03.png" class="img-fluid"
+																	alt="Patient">
 															</div>
 														</div>
-														<div class="dash-widget-info">
+														<div class="dash-widget-info" *ngIf="appoi">
 															<h6>Appoinments</h6>
-															<h3>85</h3>
+															<h3>{{appoi.number}}</h3>
 															<p class="text-muted">06, Apr 2019</p>
 														</div>
 													</div>
@@ -272,25 +331,51 @@
 									</div>
 								</div>
 							</div>
+
+							<div class="row"  style="margin-left: 100px; width: 1000px; color: transparent;">
+								<div class="col-md-6" >
+									<div class=" card bb"  >
+										<a href="javascript:;" (click)="goStaff()">
+											<div class="card-body">
+											<p style="color: white; font-size: 20px; text-align: center;"><i class="fas fa-users"></i> Staff  <i class="fas fa-arrow-right" style="float: right;"></i></p>
+											</div>
+								  		</a>
+									</div>
+									
+								</div>
+
+								<div class="col-md-6">
+									<div class=" card bb">
+										<a href="javascript:;" (click)="goArticle()">
+											<div class="card-body">
+											<p style="color: white; font-size: 20px; text-align: center;"><i class="far fa-newspaper"></i> Article  <i style="float: right;" class="fas fa-arrow-right"></i></p>
+											</div>
+								  		</a>
+									
+									</div>
+									
+								</div>
+							</div>
 							
-							<div class="row" style="margin-left: 110px; width: 980px;">
+							<div class="row" style="margin-left: 100px; width: 1000px;">
 								<div class="col-md-12">
 									<h4 class="mb-4">Patient Appoinment</h4>
 									<div class="appointment-tab">
-									
+	
 										<!-- Appointment Tab -->
 										<ul class="nav nav-tabs nav-tabs-solid nav-tabs-rounded">
 											<li class="nav-item">
-												<a class="nav-link active" href="#upcoming-appointments" data-toggle="tab">Upcoming</a>
+												<a class="nav-link active" href="#upcoming-appointments"
+													data-toggle="tab">Upcoming</a>
 											</li>
 											<li class="nav-item">
 												<a class="nav-link" href="#today-appointments" data-toggle="tab">Today</a>
-											</li> 
+											</li>
 										</ul>
 										<!-- /Appointment Tab -->
-										
+	
 										<div class="tab-content">
-										
+	
 											<!-- Upcoming Appointment Tab -->
 											<div class="tab-pane show active" id="upcoming-appointments">
 												<div class="card card-table mb-0">
@@ -307,42 +392,160 @@
 																	</tr>
 																</thead>
 																<tbody>
-																	<tr>
+	
+																	<tr *ngFor="let upcoming of upcomings | paginate: { itemsPerPage: 5, currentPage: p }">
 																		<td>
 																			<h2 class="table-avatar">
-																				<a routerLink="patient-profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient.jpg" alt="User Image"></a>
-																				<a routerLink="patient-profile.html">Richard Wilson <span>#PT0016</span></a>
+																				<a routerLink="patient-profile.html"
+																					class="avatar avatar-sm mr-2"><img
+																						class="avatar-img rounded-circle"
+																						src="assets/img/patients/patient.jpg"
+																						alt="User Image"></a>
+																				<a routerLink="patient-profile.html">{{upcoming.firstname}} {{upcoming.lastname}}
+																				 <span>{{upcoming.id}}</span></a>
 																			</h2>
 																		</td>
-																		<td >11 Nov 2019 <span class="d-block text-info">10.00 AM</span></td>
-																		<td>General</td>
-																		<td>New Patient</td>
-
+																		<td>{{upcoming.date}} <span
+																				class="d-block text-info">{{upcoming.heure}}</span>
+																		</td>
+																		<td>{{upcoming.purpose}}</td>
+																		<td>{{upcoming.type_pa}}</td>
+	
 																		<td class="text-right">
 																			<div class="table-action">
-																				<button class=" btn-sm bg-info-light" style="border-color: transparent; margin-left: 40px;">
+	
+																				<a href="javascript:;"class=" btn-sm bg-info-light" 	
+																					(click)="showDetail(showModel)" 
+																					style="border-color: transparent; margin-left: 40px;">
 																					<i class="far fa-eye"></i> View
-                                                                                </button>
-																				
-																				<button class="  btn-sm bg-success-light" style="border-color: transparent;margin-left: 10px; ">
+																				</a>
+	
+																				<a href="javascript:;"
+																					class="  btn-sm bg-success-light"
+																					(click)="confirmRDV(confirmModel, upcoming.id )"
+																					style="border-color: transparent;margin-left: 10px; ">
 																					<i class="fas fa-check"></i> Accept
-                                                                                </button>
-																				<button class=" btn-sm bg-danger-light" style="border-color: transparent;margin-left: 10px; ">
+																				</a>
+																				<a href="javascript:;"
+																					class=" btn-sm bg-danger-light"
+																					(click)="cancelRDV(deleteModel, upcoming.id )"
+																					style="border-color: transparent;margin-left: 10px; ">
 																					<i class="fas fa-times"></i> Cancel
-                                                                                </button>
+																				</a>
 																			</div>
 																		</td>
+																		
+																		<ng-template #showModel let-c="close" let-d="dismiss">
+																			<div class="modal-header">
+																				<h4 id="modal-title" class="modal-title">Appointment Details</h4>
+																				<button type="button" aria-label="Close button"
+																					(click)="d('Cross click')" aria-describedby="modal-title"
+																					class="close">
+																					<span aria-hidden="true">×</span>
+																				</button>
+																			</div>
+																			<div class="modal-body">
+																				<ul class="info-details">
+																					<li>
+																						<div class="details-header">
+																							<div class="row">
+																								<div class="col-md-6">
+																									<span class="title">#APT00{{upcoming.id}}</span>
+																									<span class="text">{{upcoming.date}} {{upcoming.heure}} AM</span>
+																								</div>
+																								<div class="col-md-6">
+																									<div class="text-right">
+																										<button type="button" class="btn bg-success-light btn-sm" id="topup_status">Completed</button>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																					</li>
+																					<li>
+																						<span class="title">Status:</span>
+																						<span class="text">Completed</span>
+																					</li>
+																					<li>
+																						<span class="title">Confirm Date:</span>
+																						<span class="text">29 Jun 2019</span>
+																					</li>
+																					<li>
+																						<span class="title">Paid Amount</span>
+																						<span class="text">$450</span>
+																					</li>
+																				</ul>
+																			</div>
+																			<div class="modal-footer">
+	
+																			</div>
+																			
+																		</ng-template>
+																		
 																	</tr>
-																	
-																	
+																	<pagination-controls style="float:right ;" (pageChange)="p = $event" style="float: right;"></pagination-controls>
+	
 																</tbody>
-															</table>		
+															</table>
 														</div>
 													</div>
 												</div>
 											</div>
 											<!-- /Upcoming Appointment Tab -->
-									   
+	
+											<!--ngmodel-->
+	
+											<ng-template #confirmModel let-c="close" let-d="dismiss">
+												<div class="modal-header">
+													<h4 id="modal-title" class="modal-title">Appointment validation</h4>
+													<button type="button" aria-label="Close button"
+														(click)="d('Cross click')" aria-describedby="modal-title"
+														class="close">
+														<span aria-hidden="true">×</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<p><strong>Are you sure you want to comfirm <span class="text-primary">
+																this item</span>
+														</strong></p>
+													
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-outline-secondary"
+														(click)="d('Cross click')">Cancel</button>
+													<button type="button" ngbautofocus="" class="btn btn-primary"
+														(click)="c('Save click')">Ok</button>
+												</div>
+											</ng-template>
+											<ng-template #deleteModel let-c="close" let-d="dismiss">
+												<div class="modal-header">
+													<h4 id="modal-title" class="modal-title">Appointment Canceling</h4>
+													<button type="button" aria-label="Close button"
+														(click)="d('Cross click')" aria-describedby="modal-title"
+														class="close">
+														<span aria-hidden="true">×</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<p><strong>Are you sure you want to cancel <span class="text-primary">
+																this item</span>
+														</strong></p>
+													<p>All information associated to this appointment will be permanently
+														deleted.
+														<span class="text-danger">This operation can not be undone.</span>
+													</p>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-outline-secondary"
+														(click)="d('Cross click')">Cancel</button>
+													<button type="button" ngbautofocus="" class="btn btn-danger"
+														(click)="c('Save click')">Ok</button>
+												</div>
+											</ng-template>
+											
+											
+	
+											<!--/ngmodel-->
+	
 											<!-- Today Appointment Tab -->
 											<div class="tab-pane" id="today-appointments">
 												<div class="card card-table mb-0">
@@ -360,42 +563,102 @@
 																	</tr>
 																</thead>
 																<tbody>
-																	<tr>
+																	<tr *ngFor="let apppoitment of appointments">
 																		<td>
 																			<h2 class="table-avatar">
-																				<a routerLink="patient-profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient6.jpg" alt="User Image"></a>
-																				<a routerLink="patient-profile.html">Elsie Gilley <span>#PT0006</span></a>
+																				<a routerLink="patient-profile.html"
+																					class="avatar avatar-sm mr-2"><img
+																						class="avatar-img rounded-circle"
+																						src="assets/img/patients/patient6.jpg"
+																						alt="User Image"></a>
+																				<a routerLink="patient-profile.html">{{apppoitment.firstname}} {{apppoitment.lastname}}
+																					 <span>#PT0006</span></a>
 																			</h2>
 																		</td>
-																		<td>14 Nov 2019 <span class="d-block text-info">6.00 PM</span></td>
+																		<td>14 Nov 2019 <span class="d-block text-info">6.00
+																				PM</span></td>
 																		<td>Fever</td>
-																		<td>Old Patient</td>
+																		<td>{{apppoitment.type_pa}}</td>
 																		<td class="text-center">$300</td>
 																		<td class="text-right">
 																			<div class="table-action">
-																				<button class=" btn-sm bg-info-light" style="border-color: transparent; margin-left: 40px;">
+	
+																				<a href="javascript:;"
+																					class=" btn-sm bg-info-light" 	
+																					(click)="showDetail(showModel2)" 
+																					style="border-color: transparent; margin-left: 40px;">
 																					<i class="far fa-eye"></i> View
-																				</button>
-																				
-																				<button class=" btn-sm bg-success-light" style="border-color: transparent; margin-left: 10px;">
+																				</a>
+	
+																				<a href="javascript:;"
+																					class="  btn-sm bg-success-light"
+																					(click)="confirmRDV(confirmModel, apppoitment.id )"
+																					style="border-color: transparent;margin-left: 10px; ">
 																					<i class="fas fa-check"></i> Accept
-																				</button>
-
-																				<button class=" btn-sm bg-danger-light" style="border-color: transparent; margin-left: 10px;">
+																				</a>
+																				<a href="javascript:;"
+																					class=" btn-sm bg-danger-light"
+																					(click)="cancelRDV(deleteModel, apppoitment.id )"
+																					style="border-color: transparent;margin-left: 10px; ">
 																					<i class="fas fa-times"></i> Cancel
-																				</button>
+																				</a>
 																			</div>
 																		</td>
+																		<ng-template #showModel2 let-c="close" let-d="dismiss">
+																			<div class="modal-header">
+																				<h4 id="modal-title" class="modal-title">Appointment Details</h4>
+																				<button type="button" aria-label="Close button"
+																					(click)="d('Cross click')" aria-describedby="modal-title"
+																					class="close">
+																					<span aria-hidden="true">×</span>
+																				</button>
+																			</div>
+																			<div class="modal-body">
+																				<ul class="info-details">
+																					<li>
+																						<div class="details-header">
+																							<div class="row">
+																								<div class="col-md-6">
+																									<span class="title">#APT00{{apppoitment.id}}</span>
+																									<span class="text">{{apppoitment.date}} {{apppoitment.heure}} AM</span>
+																								</div>
+																								<div class="col-md-6">
+																									<div class="text-right">
+																										<button type="button" class="btn bg-success-light btn-sm" id="topup_status">Completed</button>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																					</li>
+																					<li>
+																						<span class="title">Status:</span>
+																						<span class="text">Completed</span>
+																					</li>
+																					<li>
+																						<span class="title">Confirm Date:</span>
+																						<span class="text">29 Jun 2019</span>
+																					</li>
+																					<li>
+																						<span class="title">Paid Amount</span>
+																						<span class="text">$450</span>
+																					</li>
+																				</ul>
+																			</div>
+																			<div class="modal-footer">
+	
+																			</div>
+																			
+																		</ng-template>
 																	</tr>
-																	
+	
 																</tbody>
-															</table>		
-														</div>	
-													</div>	
-												</div>	
+															</table>
+														</div>
+													</div>
+												</div>
 											</div>
 											<!-- /Today Appointment Tab -->
-											
+	
 										</div>
 									</div>
 								</div>
@@ -410,7 +673,142 @@
 			<!-- /Page Content -->
    
 			<!-- Footer -->
-			<app-footer></app-footer>
+			<footer class="footer">
+				
+				<!-- Footer Top -->
+				<div class="footer-top">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-3 col-md-6">
+							
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-about">
+									<div class="footer-logo">
+										<img src="assets/img/footer-logo.png" alt="logo">
+									</div>
+									<div class="footer-about-content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+										<div class="social-icon">
+											<ul>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+												</li>
+												<li>
+													<a href="#" target="_blank"><i class="fab fa-dribbble"></i> </a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6">
+							
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-menu">
+									<h2 class="footer-title">For Patients</h2>
+									<ul>
+										<li><a href="search.html"><i class="fas fa-angle-double-right"></i> Search for Doctors</a></li>
+										<li><a href="login.html"><i class="fas fa-angle-double-right"></i> Login</a></li>
+										<li><a href="register.html"><i class="fas fa-angle-double-right"></i> Register</a></li>
+										<li><a href="booking.html"><i class="fas fa-angle-double-right"></i> Booking</a></li>
+										<li><a href="patient-dashboard.html"><i class="fas fa-angle-double-right"></i> Patient Dashboard</a></li>
+									</ul>
+								</div>
+								<!-- /Footer Widget -->
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6">
+							
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-menu">
+									<h2 class="footer-title">For Doctors</h2>
+									<ul>
+										<li><a href="appointments.html"><i class="fas fa-angle-double-right"></i> Appointments</a></li>
+										<li><a href="chat.html"><i class="fas fa-angle-double-right"></i> Chat</a></li>
+										<li><a href="login.html"><i class="fas fa-angle-double-right"></i> Login</a></li>
+										<li><a href="doctor-register.html"><i class="fas fa-angle-double-right"></i> Register</a></li>
+										<li><a href="doctor-dashboard.html"><i class="fas fa-angle-double-right"></i> Doctor Dashboard</a></li>
+									</ul>
+								</div>
+								<!-- /Footer Widget -->
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6">
+							
+								<!-- Footer Widget -->
+								<div class="footer-widget footer-contact">
+									<h2 class="footer-title">Contact Us</h2>
+									<div class="footer-contact-info">
+										<div class="footer-address">
+											<span><i class="fas fa-map-marker-alt"></i></span>
+											<p> 3556  Beech Street, San Francisco,<br> California, CA 94108 </p>
+										</div>
+										<p>
+											<i class="fas fa-phone-alt"></i>
+											+1 315 369 5943
+										</p>
+										<p class="mb-0">
+											<i class="fas fa-envelope"></i>
+											doccure@example.com
+										</p>
+									</div>
+								</div>
+								<!-- /Footer Widget -->
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!-- /Footer Top -->
+				
+				<!-- Footer Bottom -->
+                <div class="footer-bottom">
+					<div class="container-fluid">
+					
+						<!-- Copyright -->
+						<div class="copyright">
+							<div class="row">
+								<div class="col-md-6 col-lg-6">
+									<div class="copyright-text">
+										<p class="mb-0"><a href="templateshub.net">Templates Hub</a></p>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-6">
+								
+									<!-- Copyright Menu -->
+									<div class="copyright-menu">
+										<ul class="policy-menu">
+											<li><a href="term-condition.html">Terms and Conditions</a></li>
+											<li><a href="privacy-policy.html">Policy</a></li>
+										</ul>
+									</div>
+									<!-- /Copyright Menu -->
+									
+								</div>
+							</div>
+						</div>
+						<!-- /Copyright -->
+						
+					</div>
+				</div>
+				<!-- /Footer Bottom -->
+				
+			</footer>
 			<!-- /Footer -->
 		   
 		</div>

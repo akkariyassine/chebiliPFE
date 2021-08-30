@@ -7,3 +7,19 @@
     background-color: #007bff; /* Green */
     color: white;
   }
+
+  .info {
+	border-color: #2196F3;
+	color: dodgerblue;
+	border-radius: 4px;
+    padding: 10px 15px !important;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .info:hover {
+	background: #2196F3;
+	color: white;
+  }

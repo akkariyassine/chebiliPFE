@@ -12,57 +12,163 @@
 	<body>
 
 		<!-- Main Wrapper -->
-		<div class="main-wrapper">
+		<div class="main-wrapper" style="padding-top:85px;"> 
 		
 			<!-- Header -->
-			<app-header></app-header>
+            <header class="header"   >
+				<nav class="navbar navbar-expand-lg header-nav" ><!--style="height: 75px; "-->
+					<div class="navbar-header">
+						<a id="mobile_btn" href="javascript:void(0);">
+							<span class="bar-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</a>
+						<a routerLink="/home" class="navbar-brand logo">
+							<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+						</a>
+					</div>
+					<div class="main-menu-wrapper " style="margin-left: 70px;" >
+						<div class="menu-header">
+							<a routerLink="/home" class="menu-logo">
+								<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
+							</a>
+							<a id="menu_close" class="menu-close" href="javascript:void(0);">
+								<i class="fas fa-times"></i>
+							</a>
+						</div>
+						<ul class="main-nav" style="margin-left: 20px;">
+							<li >
+								<a routerLink="/home">Home</a>
+							</li >
+							<li >
+								<a routerLink="/search-Doctor">Doctors <i ></i></a>
+							   
+							</li>	
+							<li >
+								<a routerLink="/search-Pharmacie">pharmacies <i ></i></a>
+							   
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/articles">Articles <i ></i></a>
+								
+							</li>	
+			
+							<li class="has-submenu">
+								<a routerLink="/tarif">Tarif <i></i></a>
+								
+							</li>
+							<li>
+								<a routerLink="admin/index.html" >Conference</a>
+							</li>
+			
+							<li>
+								<a routerLink="/about" >About-US</a>
+							</li>
+							<li>
+								<a routerLink="/contact-us" >Contact-US</a>
+							</li>
+						   
+						</ul>		 
+					</div>		 
+					<ul class="nav header-navbar-rht">
+						<!--<li class="nav-item">
+							<a class="nav-link header-login" routerLink="/test">Testing Now</a>
+							 <a class="  info appointment-btn btn1"  routerLink="/test">Testing Now</a>
+						</li>-->
+						<li class="nav-item">
+							<a class="btn1  btn-lg login-btn" routerLink="/login">login / Signup </a>
+						</li>
+					</ul>
+				</nav>
+			</header>
 			<!-- /Header -->
 			
 <!-- Home Banner -->
-<div class="imeg" style="background-image: url('../assets/img/tabiba.png'); width: 1300px; padding-top: 500px; margin-left: 25px; margin-bottom: 10px; " >
-  <div style="margin-top: -170px; margin-left: 100px;">
-      <button  class="btn1  btn-lg login-btn" > Testing Now</button>
-  </div>
-    <div ><!--padding-top: 120px;-->
-        <div class="banner-wrapper">
-       
-        <!---    <div class="banner-header text-center">
-                <h1 style="color: rgba(19, 53, 11, 0.986);">know your disease now</h1>
 
-                <h2 ><a routerlink="/test"   href="/test"  ><i class="search-btn"></i>Testing now!</a></h2>
-                <h1>Search Doctor, Make an Appointment</h1>
-                <p>Discover the best doctors, clinic & hospital the city nearest to you.</p>
-            </div>-->
+
+       
+
+        <div class="imeg" style="background-image: url('../assets/img/tabb.png');  padding-top: 500px; margin-left: 20px; margin-right: 20px; " >
+            <div style=" margin-top: -400px; margin-left: 100px;">
+              <h1 style="color: #dc09ae; font-size: 40px;">What concerns you <br> about your health today?</h1>  
+            <br>
+            </div>
+            <div style="margin-left: 150px;">
+               <h3>Check your symptoms and find out <br> what could be causing them. it's fast, <br>
+                free and anonymous. <br></h3> 
+            </div>
+            <div style=" margin-left: 150px; margin-top: 50px;">
+                <button  class="btnn btn-lg login-btn" (click)="ontest()"> Testing Now</button>
+            </div>
              
-           
-            
+          </div>
+<div  class="card" style=" background-color:white; margin-left: 20px; margin-right: 20px; margin-top: 20px;" ><!--rgba(36, 49, 231, 0.856); -->
+    <div class="card-body" >
+       
+        <div style="margin-left: 50px; margin-top: 100px;">
+            <h1> DOCCURE provides you with </h1>
+            <h1>a fast and accurate health</h1>
+            <h1>assessment</h1>
+            </div>
+            <div style="margin-left: 50px;"> 
+                <ol start="1">
+                <div class="hh3">
+                    <li> Enter your symptoms</li>
+                    <li>Answer some simple questions</li>
+                    <li>Done! Your assessment will reveal:</li>
+                    <div style="margin-left: -20px;">
+                    <ul ><i class="fas fa-check" style="color: rgb(47, 255, 75);"></i> possible causes of your symptoms</ul>
+                    <ul ><i class="fas fa-check" style="color: rgb(47, 255, 75);"></i>options for next steps</ul>
+                        <ul ><i class="fas fa-check" style="color: rgb(47, 255, 75);"></i>suggested lab tests</ul>
+                    </div>
+                </div>
+                </ol>
+            </div>
+        
+        <div class="imm" style="background-image: url('../assets/img/bg.jpg');background-repeat: no-repeat;   " >
         </div>
+     
+
+
     </div>
 </div>
 
-</div>
+<div  class="card" style=" background-color:white; margin-left: 20px; margin-right: 20px;"  ><!--rgba(36, 49, 231, 0.856); -->
+    <div class="card-body" >
+       
 
-
-<div style="padding-bottom: 300px;"> 
-<div style="margin-left: 50px; margin-top: 100px;">
-<h1> DOCCURE provides you with </h1>
-<h1>a fast and accurate health</h1>
- <h1>assessment</h1>
-</div>
-<div style="margin-left: 50px;"> 
-    <ol start="1">
-      <h2> <li> Enter your symptoms</li></h2>
-        <li>Answer some simple questions</li>
-        <li>Done! Your assessment will reveal:</li>
-        <div style="margin-left: -20px;">
-        <ul ><i class="fas fa-check" style="color: rgb(47, 255, 75);"></i> possible causes of your symptoms</ul>
-        <ul ><i class="fas fa-check" style="color: rgb(47, 255, 75);"></i>options for next steps</ul>
-            <ul ><i class="fas fa-check" style="color: rgb(47, 255, 75);"></i>suggested lab tests</ul>
+<div > 
+    <div style="margin-left: 50px; margin-top: 100px;">
+    <h1>Intelligent technology  </h1>
+    <h1>you can trust</h1>
+    </div>
+    <div style="margin-left: 50px;"> 
+       <br>
+        <div class="hh3">
+            <ul> DocCure AI uses our doctors’ knowledge, scientific literature and </ul>
+            <ul>statistical data culled from thousands of patient cases.</ul>
+<br>
+            <ul> <a href="more info" style="font-weight: 40px; font-size: larger;"> more info -> </a></ul>
+           
         </div>
-      </ol>
+      
+    </div>
+
+<div class="imm2" style="background-image: url('../assets/img/ia.png');background-repeat: no-repeat;   " >
+</div>
 </div>
 
-<div  style="background-image: url('../assets/img/bg.jpg');background-repeat: no-repeat;   " >
+</div>
+</div>
+
+
+<div  class="card" style=" background-color:white; margin-left: 110px; margin-right: 110px; margin-top: 20px;"  ><!--rgba(36, 49, 231, 0.856); -->
+    <div class="card-body" style="color: #336699;" >
+<h1> <i class="far fa-newspaper"></i> 72% of internet users look for health information online</h1>
+<ul>Source: Pew Research Center’s Internet & American Life Project, Health Online, 2013</ul>
 </div>
 </div>
 <!-- /Home Banner -->
@@ -70,7 +176,7 @@
 
             <app-footer></app-footer>
 
-
+</div>
      
     </body>
 </html>

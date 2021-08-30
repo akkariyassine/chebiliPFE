@@ -1,0 +1,27 @@
+.bou{
+    background-color: #56e63a;
+    color: white;
+    border: 1px solid #56e63a;
+}
+.bou:hover{
+    background-color:white ;
+    color: #56e63a;
+    border: 1px solid #56e63a;
+}
+
+.bot{
+    background-color: #e66161;
+    color: white;
+    border: 1px solid #e66161;
+}
+.bot:hover{
+    background-color:white ;
+    color: #da0c0c;
+    border: 1px solid #e66161;
+}
+.de{
+    color: white;
+}
+.de:hover{
+    color: #da0c0c;
+}

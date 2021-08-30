@@ -1,0 +1,5 @@
+.bbg{
+   /* background-image: url("./../../../../assets/img/bbg.jpg");*/
+     background: rgb(204,243,247);
+background: linear-gradient(93deg, rgba(204,243,247,1) 21%, rgba(0,123,255,1) 100%);
+}
